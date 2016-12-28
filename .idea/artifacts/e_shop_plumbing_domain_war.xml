@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="e-shop-plumbing-domain:war">
+    <output-path>$PROJECT_DIR$/e-shop-plumbing-domain/target</output-path>
+    <root id="archive" name="e-shop-plumbing-domain-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="e-shop-plumbing-domain:war exploded" />
+    </root>
+  </artifact>
+</component>

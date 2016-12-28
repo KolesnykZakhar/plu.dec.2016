@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/e-shop-plumbing.iml" filepath="$PROJECT_DIR$/e-shop-plumbing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/e-shop-plumbing-domain/e-shop-plumbing-domain.iml" filepath="$PROJECT_DIR$/e-shop-plumbing-domain/e-shop-plumbing-domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/e-shop-plumbing-service/e-shop-plumbing-service.iml" filepath="$PROJECT_DIR$/e-shop-plumbing-service/e-shop-plumbing-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/e-shop-plumbing-web/e-shop-plumbing-web.iml" filepath="$PROJECT_DIR$/e-shop-plumbing-web/e-shop-plumbing-web.iml" />
+    </modules>
+  </component>
+</project>
