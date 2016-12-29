@@ -19,14 +19,14 @@ public class User implements Serializable {
     @Column(name = "idUser")
     private Long idUser;
 
-    @ElementCollection
+    @ElementCollection(fetch = FetchType.EAGER)
     @CollectionTable(name = "shopping_basket",
             joinColumns = @JoinColumn(name = "idUser"))
     @MapKeyJoinColumn(name = "idProduct")
     @Column(name = "amount")
     private Map<Product, Integer> shoppingBasket;
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "wish_list",
             joinColumns = {@JoinColumn(name = "idUser")},
             inverseJoinColumns = {@JoinColumn(name = "idProduct")})

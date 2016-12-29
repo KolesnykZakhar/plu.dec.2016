@@ -3,7 +3,6 @@ package dao;
 import dao.product.category.Category;
 import dao.product.category.CategoryDao;
 import dao.product.category.CategoryDaoImpl;
-import org.hibernate.ObjectNotFoundException;
 import org.junit.Test;
 
 import static dao.DatabaseTools.initializeCategory;
@@ -22,7 +21,7 @@ public class CategoryDaoTest {
         categoryDao.insert(category);
 
         //then
-        assertEquals(category.getName(), categoryDao.selectById(category.getIdCategory()).getName());
+        assertEquals(category.getNameCategory(), categoryDao.selectById(category.getIdCategory()).getNameCategory());
         assertTrue(categoryDao.list().stream().anyMatch(
                 categories -> categories.getIdCategory().equals(category.getIdCategory())));
 
@@ -31,7 +30,7 @@ public class CategoryDaoTest {
         categoryDao.update(category);
 
         //then
-        assertEquals(category.getName(), categoryDao.selectById(category.getIdCategory()).getName());
+        assertEquals(category.getNameCategory(), categoryDao.selectById(category.getIdCategory()).getNameCategory());
         assertTrue(categoryDao.list().stream().anyMatch(
                 categories -> categories.getIdCategory().equals(category.getIdCategory())));
 
@@ -42,7 +41,7 @@ public class CategoryDaoTest {
         try {
             categoryDao.selectById(category.getIdCategory()).getIdCategory();
             fail();
-        } catch (ObjectNotFoundException ignore) {
+        } catch (NullPointerException ignore) {
         }
     }
 }

@@ -24,7 +24,7 @@ public class Product implements Serializable{
 
     @NotEmpty
     @Column(name = "nameProduct")
-    private String name;
+    private String nameProduct;
 
     @ManyToOne
     @JoinTable(name = "category_product",
@@ -32,13 +32,13 @@ public class Product implements Serializable{
             inverseJoinColumns = {@JoinColumn(name = "idCategory")})
     private Category category;
 
-    @ElementCollection(fetch=FetchType.LAZY)
+    @ElementCollection(fetch=FetchType.EAGER)
     @JoinTable(name = "description_product",
             joinColumns = @JoinColumn(name = "idProduct"))
     @MapKeyColumn(name = "type_characteristic")
     private Map<String, String> description;
 
-    @ElementCollection(fetch=FetchType.LAZY)
+    @ElementCollection(fetch=FetchType.EAGER)
     @JoinTable(name = "pictures_product",
             joinColumns = @JoinColumn(name = "idProduct"))
     @MapKeyColumn(name = "picture_number")
@@ -84,12 +84,12 @@ public class Product implements Serializable{
         this.price = price;
     }
 
-    public String getName() {
-        return name;
+    public String getNameProduct() {
+        return nameProduct;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNameProduct(String name) {
+        this.nameProduct = name;
     }
 
     public int getAmount() {

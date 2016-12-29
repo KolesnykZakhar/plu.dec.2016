@@ -5,29 +5,77 @@ import dao.product.category.CategoryDaoImpl;
 import dao.product.Product;
 import dao.product.ProductDaoImpl;
 import dao.user.User;
-import dao.user.UserDaoImpl;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+import org.hibernate.criterion.Restrictions;
+import org.junit.Ignore;
+import org.junit.Test;
 
 import java.io.*;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 import java.util.zip.GZIPOutputStream;
 
 public class DatabaseTools {
-    public static void main(String[] args) {
 
-    }
-    public static void clearDatabaseFromTestingRows(){
+    @Ignore
+    @Test
+    public static void clearDatabaseFromTestingRows() {
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction transaction = session.getTransaction();
+        transaction.begin();
+        try {
 
+            //clear user
+            User user = (User) session.createCriteria(User.class)
+                    .add(Restrictions.eq("firstName", "FirstNameTEST")).uniqueResult();
+            if (user != null) {
+                session.delete(user);
+            }
+            User userUpdate = (User) session.createCriteria(User.class)
+                    .add(Restrictions.eq("firstName", "FirstNameTEST-UPDATE")).uniqueResult();
+            if (userUpdate != null) {
+                session.delete(userUpdate);
+            }
+
+            //clear product
+            Product product = (Product) session.createCriteria(Product.class)
+                    .add(Restrictions.eq("nameProduct", "productNameTEST")).uniqueResult();
+            if (product != null) {
+                session.delete(product);
+            }
+            Product productUpdate = (Product) session.createCriteria(Product.class)
+                    .add(Restrictions.eq("nameProduct", "productNameTEST-UPDATE")).uniqueResult();
+            if (productUpdate != null) {
+                session.delete(productUpdate);
+            }
+
+            //clear category
+            Category category = (Category) session.createCriteria(Category.class)
+                    .add(Restrictions.eq("nameCategory", "CategoryNameTEST")).uniqueResult();
+            if (category != null) {
+                session.delete(category);
+            }
+            Category categoryUpdate = (Category) session.createCriteria(Category.class)
+                    .add(Restrictions.eq("nameCategory", "CategoryNameTEST-UPDATE")).uniqueResult();
+            if (categoryUpdate != null) {
+                session.delete(categoryUpdate);
+            }
+
+            transaction.commit();
+        } catch (Exception e) {
+            transaction.rollback();
+            throw e;
+        } finally {
+            session.close();
+        }
     }
 
     public static void initializeCategory(Category category) {
-        category.setName("CategoryNameTEST");
+        category.setNameCategory("CategoryNameTEST");
     }
 
     public static void updateFieldOfCategory(Category category) {
-        category.setName("CategoryNameTEST-UPDATE");
+        category.setNameCategory("CategoryNameTEST-UPDATE");
     }
 
     public static void initializeProduct(Product product/*, Category category*/) {
@@ -73,7 +121,7 @@ public class DatabaseTools {
         new CategoryDaoImpl().insert(category);
 
         //initialize product
-        product.setName("productNameTEST");
+        product.setNameProduct("productNameTEST");
         product.setAmount(111);
         product.setPrice(111.11);
         product.setCategory(category);
@@ -82,13 +130,13 @@ public class DatabaseTools {
     }
 
     public static void updateFieldOfProduct(Product product) {
-        product.setName("productNameTEST");
+        product.setNameProduct("productNameTEST-UPDATE");
     }
 
-    public static void initializeUser(User user/*, Category category*/, Product product) {
+    public static void initializeUser(User user, Product product) {
 
         //initialize product
-        initializeProduct(product/*, category*/);
+        initializeProduct(product);
         new ProductDaoImpl().insert(product);
 
         //initialize shopping basket map

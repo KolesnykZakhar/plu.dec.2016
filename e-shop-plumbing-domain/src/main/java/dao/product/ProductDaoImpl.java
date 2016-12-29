@@ -2,6 +2,7 @@ package dao.product;
 
 import dao.HibernateUtil;
 import org.hibernate.Session;
+import org.hibernate.criterion.Restrictions;
 
 import java.util.List;
 
@@ -9,7 +10,10 @@ public class ProductDaoImpl implements ProductDao {
     @Override
     public Product selectById(Long id) {
         Session session = HibernateUtil.getSessionFactory().openSession();
-        return (Product) session.byId(Product.class).getReference(id);
+        Product product = (Product) session.createCriteria(Product.class)
+                .add(Restrictions.eq("idProduct", id)).uniqueResult();
+        session.close();
+        return product;
     }
 
     @Override

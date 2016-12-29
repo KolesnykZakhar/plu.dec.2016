@@ -8,7 +8,6 @@ import dao.product.ProductDaoImpl;
 import dao.user.User;
 import dao.user.UserDao;
 import dao.user.UserDaoImpl;
-import org.hibernate.ObjectNotFoundException;
 import org.junit.Test;
 
 import static dao.DatabaseTools.initializeUser;
@@ -29,7 +28,7 @@ public class UserDaoTest {
         Product product = new Product();
 
         //when
-        initializeUser(user,/* category,*/ product);
+        initializeUser(user, product);
         userDao.insert(user);
 
         //then
@@ -71,17 +70,17 @@ public class UserDaoTest {
         try {
             userDao.selectById(user.getIdUser()).getFirstName();
             fail();
-        } catch (ObjectNotFoundException ignore) {
+        } catch (NullPointerException ignore) {
         }
         try {
-            productDao.selectById(product.getIdProduct()).getName();
+            productDao.selectById(product.getIdProduct()).getNameProduct();
             fail();
-        } catch (ObjectNotFoundException ignore) {
+        } catch (NullPointerException ignore) {
         }
         try {
-            categoryDao.selectById(product.getCategory().getIdCategory()).getName();
+            categoryDao.selectById(product.getCategory().getIdCategory()).getNameCategory();
             fail();
-        } catch (ObjectNotFoundException ignore) {
+        } catch (NullPointerException ignore) {
         }
     }
 }

@@ -4,7 +4,6 @@ import dao.product.Product;
 import dao.product.ProductDao;
 import dao.product.ProductDaoImpl;
 import dao.product.category.CategoryDaoImpl;
-import org.hibernate.ObjectNotFoundException;
 import org.junit.Test;
 
 import static dao.DatabaseTools.initializeProduct;
@@ -24,7 +23,7 @@ public class ProductDaoTest {
         productDao.insert(product);
 
         //then
-        assertEquals(product.getName(), productDao.selectById(product.getIdProduct()).getName());
+        assertEquals(product.getNameProduct(), productDao.selectById(product.getIdProduct()).getNameProduct());
         assertTrue(productDao.list().stream().anyMatch(
                 products -> products.getIdProduct().equals(product.getIdProduct())));
 
@@ -33,7 +32,7 @@ public class ProductDaoTest {
         productDao.update(product);
 
         //then
-        assertEquals(product.getName(), productDao.selectById(product.getIdProduct()).getName());
+        assertEquals(product.getNameProduct(), productDao.selectById(product.getIdProduct()).getNameProduct());
         assertTrue(productDao.list().stream().anyMatch(
                 products -> products.getIdProduct().equals(product.getIdProduct())));
 
@@ -46,7 +45,7 @@ public class ProductDaoTest {
         try {
             productDao.selectById(product.getIdProduct()).getIdProduct();
             fail();
-        } catch (ObjectNotFoundException ignore) {
+        } catch (NullPointerException ignore) {
         }
     }
 }

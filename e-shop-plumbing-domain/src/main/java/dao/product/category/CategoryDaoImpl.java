@@ -3,6 +3,7 @@ package dao.product.category;
 
 import dao.HibernateUtil;
 import org.hibernate.Session;
+import org.hibernate.criterion.Restrictions;
 
 import java.util.List;
 
@@ -10,7 +11,10 @@ public class CategoryDaoImpl implements CategoryDao {
     @Override
     public Category selectById(Long id) {
         Session session = HibernateUtil.getSessionFactory().openSession();
-        return (Category) session.byId(Category.class).getReference(id);
+        Category category = (Category) session.createCriteria(Category.class)
+                .add(Restrictions.eq("idCategory", id)).uniqueResult();
+        session.close();
+        return category;
     }
 
     @Override

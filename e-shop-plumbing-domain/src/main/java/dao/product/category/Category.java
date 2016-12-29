@@ -12,7 +12,7 @@ public class Category {
     private Long idCategory;
 
     @Column(name = "nameCategory", unique = true, nullable = false)
-    private String name;
+    private String nameCategory;
 
     public Category() {
     }
@@ -25,11 +25,11 @@ public class Category {
         this.idCategory = idCategory;
     }
 
-    public String getName() {
-        return name;
+    public String getNameCategory() {
+        return nameCategory;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNameCategory(String name) {
+        this.nameCategory = name;
     }
 }

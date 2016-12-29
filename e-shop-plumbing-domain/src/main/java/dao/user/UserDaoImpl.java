@@ -2,13 +2,18 @@ package dao.user;
 
 import dao.HibernateUtil;
 import org.hibernate.Session;
+import org.hibernate.criterion.Restrictions;
+
 import java.util.List;
 
 public class UserDaoImpl implements UserDao {
     @Override
     public User selectById(Long id) {
         Session session = HibernateUtil.getSessionFactory().openSession();
-        return (User) session.byId(User.class).getReference(id);
+        User user = (User) session.createCriteria(User.class)
+                .add(Restrictions.eq("idUser", id)).uniqueResult();
+        session.close();
+        return user;
     }
 
     @Override
