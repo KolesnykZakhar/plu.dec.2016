@@ -11,5 +11,5 @@ public interface CategoryDao {
 
     void remove(Category category);
 
-    List<Category> list();
+    List list();
 }

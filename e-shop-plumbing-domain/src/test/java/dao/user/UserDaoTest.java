@@ -1,4 +1,4 @@
-package dao;
+package dao.user;
 
 import dao.product.category.Category;
 import dao.product.category.CategoryDao;
@@ -16,7 +16,7 @@ import static dao.Initializer.initializeUser;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 
-public class DaoTest {
+public class UserDaoTest {
     @Test
     public void selectById_insert_remove_with_database_category_product_user() throws Exception {
 

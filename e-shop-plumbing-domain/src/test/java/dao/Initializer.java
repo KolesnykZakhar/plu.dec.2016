@@ -15,27 +15,36 @@ import java.util.Set;
 import java.util.zip.GZIPOutputStream;
 
 public class Initializer {
+    public static void initializeCategory(Category category) {
+        category.setName("CategoryNameTEST");
+    }
+
+    public static void updateCategory(Category category) {
+        category.setName("CategoryNameTEST-UPDATE");
+    }
+
     public static void initializeUser(User user, Category category, Product product) {
 
         //initialize product
         initializeProduct(product, category);
+        new ProductDaoImpl().insert(product);
 
         //initialize shopping basket map
         Map<Product, Integer> shoppingBasket = new HashMap<>();
-        shoppingBasket.put(product, 2222);
+        shoppingBasket.put(product, 1111);
 
         //initialize wish list set
         Set<Product> wishList = new HashSet<>();
         wishList.add(product);
 
 
-        user.setFirstName("1");
-        user.setLastName("1");
-        user.setPhone("1");
-        user.setEmail("1@gmail.com");
-        user.setAddress("1");
-        user.setLoginUser("1");
-        user.setPasswordUser("1");
+        user.setFirstName("FirstNameTEST");
+        user.setLastName("LastNameTEST");
+        user.setPhone("PhoneTEST");
+        user.setEmail("email@TEST");
+        user.setAddress("AddressTEST");
+        user.setLoginUser("LoginTEST");
+        user.setPasswordUser("PasswordTEST");
         user.setWishList(wishList);
         user.setShoppingBasket(shoppingBasket);
         new UserDaoImpl().insert(user);
@@ -45,9 +54,9 @@ public class Initializer {
 
         //initialize map with description
         Map<String, String> descriptionMock = new HashMap<>();
-        descriptionMock.put("Толщина", "2мм");
-        descriptionMock.put("Максимальное давление", "50 bar");
-        descriptionMock.put("Страна производитель", "Украина");
+        descriptionMock.put("1st TEST-attribute", "parameter of 1st TEST-attribute");
+        descriptionMock.put("2st TEST-attribute", "parameter of 2st TEST-attribute");
+        descriptionMock.put("3st TEST-attribute", "parameter of 3st TEST-attribute");
 
         //initialize map with pictures
         Map<Integer, byte[]> picturesMock = new HashMap<>();
@@ -80,19 +89,14 @@ public class Initializer {
 
         //initialize category
         initializeCategory(category);
+        new CategoryDaoImpl().insert(category);
 
         //initialize product
-        product.setName("1");
-        product.setAmount(100);
-        product.setPrice(11.11);
+        product.setName("TEST-productName");
+        product.setAmount(111);
+        product.setPrice(111.11);
         product.setCategory(category);
         product.setDescription(descriptionMock);
         product.setPictures(picturesMock);
-        new ProductDaoImpl().insert(product);
-    }
-
-    public static void initializeCategory(Category category) {
-        category.setName("Категория");
-        new CategoryDaoImpl().insert(category);
     }
 }

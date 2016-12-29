@@ -1,9 +1,11 @@
+import dao.product.category.CategoryDaoImpl;
 import dao.user.User;
 import dao.user.UserDaoImpl;
 
 
 public class Main {
     public static void main(String[] args) {
+        new CategoryDaoImpl().list().forEach(category -> System.out.println(category.getIdCategory()));
 //        User user =new User();
 //        new UserDaoImpl().insert(user);
 //        Category category=new Category();
@@ -16,13 +18,13 @@ public class Main {
 //        new ProductDaoImpl().insert(product);
 
 
-        User user=new User();
-        user.setFirstName("1");
-        user.setLastName("1");
-        user.setPhone("1");
-        user.setEmail("1@gmail.com");
-        user.setAddress("1");
-        new UserDaoImpl().insert(user);
+//        User user=new User();
+//        user.setFirstName("1");
+//        user.setLastName("1");
+//        user.setPhone("1");
+//        user.setEmail("1@gmail.com");
+//        user.setAddress("1");
+//        new UserDaoImpl().insert(user);
 //        System.out.println(user.getIdUser());
 //        new UserDaoImpl().selectById(user.getIdUser()).getFirstName();
 //        new UserDaoImpl().remove(user);
