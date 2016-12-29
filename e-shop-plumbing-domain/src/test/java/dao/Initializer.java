@@ -1,10 +1,11 @@
 package dao;
 
-import dao.category.Category;
-import dao.category.CategoryDaoImpl;
+import dao.product.category.Category;
+import dao.product.category.CategoryDaoImpl;
 import dao.product.Product;
 import dao.product.ProductDaoImpl;
 import dao.user.User;
+import dao.user.UserDaoImpl;
 
 import java.io.*;
 import java.util.HashMap;
@@ -14,28 +15,30 @@ import java.util.Set;
 import java.util.zip.GZIPOutputStream;
 
 public class Initializer {
-    public static void initializeUser(User user, Product product, Category category) {
+    public static void initializeUser(User user, Category category, Product product) {
 
         //initialize product
         initializeProduct(product, category);
 
         //initialize shopping basket map
         Map<Product, Integer> shoppingBasket = new HashMap<>();
-        shoppingBasket.put(product, 2);
+        shoppingBasket.put(product, 2222);
 
         //initialize wish list set
         Set<Product> wishList = new HashSet<>();
         wishList.add(product);
+
 
         user.setFirstName("1");
         user.setLastName("1");
         user.setPhone("1");
         user.setEmail("1@gmail.com");
         user.setAddress("1");
-        user.setLogin("user");
-        user.setPassword("user");
+        user.setLoginUser("1");
+        user.setPasswordUser("1");
         user.setWishList(wishList);
         user.setShoppingBasket(shoppingBasket);
+        new UserDaoImpl().insert(user);
     }
 
     public static void initializeProduct(Product product, Category category) {
@@ -50,14 +53,14 @@ public class Initializer {
         Map<Integer, byte[]> picturesMock = new HashMap<>();
 
         try {
-            for (int i=0;i<10;i++) {
-                StringBuilder namePic= new StringBuilder("src/test/resources/pictures/")
+            for (int i = 0; i < 10; i++) {
+                StringBuilder namePic = new StringBuilder("src/test/resources/pictures/")
                         .append(i).append(".jpg");
                 byte[] b;
-                FileInputStream file =new FileInputStream
+                FileInputStream file = new FileInputStream
                         (new File(namePic.toString()));
                 ByteArrayOutputStream arr = new ByteArrayOutputStream();
-                GZIPOutputStream gzip=new GZIPOutputStream(arr);
+                GZIPOutputStream gzip = new GZIPOutputStream(arr);
                 try {
                     int c;
                     while ((c = file.read()) != -1) {
@@ -88,7 +91,7 @@ public class Initializer {
         new ProductDaoImpl().insert(product);
     }
 
-    public static void initializeCategory(Category category){
+    public static void initializeCategory(Category category) {
         category.setName("Категория");
         new CategoryDaoImpl().insert(category);
     }

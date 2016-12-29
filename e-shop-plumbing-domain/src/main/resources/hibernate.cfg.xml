@@ -11,6 +11,6 @@
         <property name="hbm2ddl.auto">update</property>
         <mapping class="dao.user.User"/>
         <mapping class="dao.product.Product"/>
-        <mapping class="dao.category.Category"/>
+        <mapping class="dao.product.category.Category"/>
     </session-factory>
 </hibernate-configuration>

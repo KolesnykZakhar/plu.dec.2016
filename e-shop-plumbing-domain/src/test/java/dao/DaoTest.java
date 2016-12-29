@@ -1,8 +1,8 @@
 package dao;
 
-import dao.category.Category;
-import dao.category.CategoryDao;
-import dao.category.CategoryDaoImpl;
+import dao.product.category.Category;
+import dao.product.category.CategoryDao;
+import dao.product.category.CategoryDaoImpl;
 import dao.product.Product;
 import dao.product.ProductDao;
 import dao.product.ProductDaoImpl;
@@ -22,18 +22,15 @@ public class DaoTest {
 
         //given
         UserDao userDao = new UserDaoImpl();
-        ProductDao productDao = new ProductDaoImpl();
         CategoryDao categoryDao = new CategoryDaoImpl();
+        ProductDao productDao = new ProductDaoImpl();
 
         User user = new User();
-        Product product = new Product();
         Category category = new Category();
-
-        //initialization
-        initializeUser(user, product, category);
+        Product product = new Product();
 
         //when
-        userDao.insert(user);
+        initializeUser(user, category, product);
 
         //then
         assertEquals(userDao.selectById(user.getIdUser()).getFirstName(), (user.getFirstName()));
@@ -41,9 +38,10 @@ public class DaoTest {
         assertEquals(userDao.selectById(user.getIdUser()).getPhone(), (user.getPhone()));
         assertEquals(userDao.selectById(user.getIdUser()).getEmail(), (user.getEmail()));
         assertEquals(userDao.selectById(user.getIdUser()).getAddress(), (user.getAddress()));
-        assertEquals(userDao.selectById(user.getIdUser()).getLogin(), (user.getLogin()));
-        assertEquals(userDao.selectById(user.getIdUser()).getPassword(), (user.getPassword()));
-        assertEquals(userDao.selectById(user.getIdUser()).getPassword(), (user.getPassword()));
+        assertEquals(userDao.selectById(user.getIdUser()).getLoginUser(), (user.getLoginUser()));
+        assertEquals(userDao.selectById(user.getIdUser()).getPasswordUser(), (user.getPasswordUser()));
+        assertEquals(userDao.selectById(user.getIdUser()).getShoppingBasket().get(new ProductDaoImpl().selectById(product.getIdProduct())),
+                (user.getShoppingBasket().get(new ProductDaoImpl().selectById(product.getIdProduct()))));
 
         //when
         userDao.remove(user);
@@ -67,5 +65,4 @@ public class DaoTest {
         } catch (ObjectNotFoundException ignore) {
         }
     }
-
 }

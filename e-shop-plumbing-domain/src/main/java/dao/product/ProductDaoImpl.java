@@ -9,7 +9,7 @@ import java.util.List;
 
 public class ProductDaoImpl implements ProductDao {
     @Override
-    public Product selectById(Integer id) {
+    public Product selectById(Long id) {
         Session session = HibernateUtil.getSessionFactory().openSession();
         return (Product) session.byId(Product.class).getReference(id);    }
 

@@ -1,9 +1,9 @@
-package dao.category;
+package dao.product.category;
 
 import java.util.List;
 
 public interface CategoryDao {
-    Category selectById(Integer id);
+    Category selectById(Long id);
 
     void insert(Category category);
 

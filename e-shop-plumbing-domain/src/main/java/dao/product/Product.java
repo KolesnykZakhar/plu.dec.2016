@@ -1,6 +1,6 @@
 package dao.product;
 
-import dao.category.Category;
+import dao.product.category.Category;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.*;
@@ -14,7 +14,7 @@ public class Product implements Serializable{
     @Id
     @GeneratedValue
     @Column(name = "idProduct")
-    private Integer idProduct;
+    private Long idProduct;
 
     @Column(name = "price")
     private double price;
@@ -68,11 +68,11 @@ public class Product implements Serializable{
         this.description = description;
     }
 
-    public Integer getIdProduct() {
+    public Long getIdProduct() {
         return idProduct;
     }
 
-    public void setIdProduct(Integer id) {
+    public void setIdProduct(Long id) {
         this.idProduct = id;
     }
 

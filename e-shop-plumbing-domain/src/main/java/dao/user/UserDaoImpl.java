@@ -16,7 +16,7 @@ import java.util.stream.Collectors;
 
 public class UserDaoImpl implements UserDao {
     @Override
-    public User selectById(Integer id) {
+    public User selectById(Long id) {
         Session session = HibernateUtil.getSessionFactory().openSession();
         return (User) session.byId(User.class).getReference(id);
 //        throw new UnsupportedOperationException("not initialized");

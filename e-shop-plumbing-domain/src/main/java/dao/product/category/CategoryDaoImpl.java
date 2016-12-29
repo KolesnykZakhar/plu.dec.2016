@@ -1,4 +1,4 @@
-package dao.category;
+package dao.product.category;
 
 
 import dao.HibernateUtil;
@@ -9,7 +9,7 @@ import java.util.List;
 
 public class CategoryDaoImpl implements CategoryDao {
     @Override
-    public Category selectById(Integer id) {
+    public Category selectById(Long id) {
         Session session = HibernateUtil.getSessionFactory().openSession();
         return (Category) session.byId(Category.class).getReference(id);
     }

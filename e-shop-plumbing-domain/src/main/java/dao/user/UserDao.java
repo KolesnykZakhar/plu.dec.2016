@@ -7,7 +7,7 @@ import java.util.Map;
 import java.util.Set;
 
 public interface UserDao {
-    User selectById(Integer id);
+    User selectById(Long id);
 
     List<User> list();
 

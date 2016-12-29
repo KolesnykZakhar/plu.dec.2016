@@ -1,23 +1,6 @@
 package dao.user;
 
-import dao.category.Category;
-import dao.category.CategoryDao;
-import dao.category.CategoryDaoImpl;
-import dao.product.Product;
-import dao.product.ProductDao;
-import dao.product.ProductDaoImpl;
-import org.hibernate.ObjectNotFoundException;
 import org.junit.Test;
-
-import java.io.File;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
-
-import static dao.Initializer.initializeUser;
-import static org.junit.Assert.*;
 
 public class UserDaoImplTest {
 

@@ -2,17 +2,13 @@ package dao.user;
 
 
 import dao.product.Product;
-import org.hibernate.annotations.CollectionOfElements;
-import org.hibernate.annotations.MapKeyType;
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.util.Map;
 import java.util.Set;
-import java.util.concurrent.ConcurrentHashMap;
 
 @Entity
 @Table(name = "user")
@@ -21,7 +17,7 @@ public class User implements Serializable {
     @Id
     @GeneratedValue
     @Column(name = "idUser")
-    private Integer idUser;
+    private Long idUser;
 
     @ElementCollection
     @CollectionTable(name = "shopping_basket",
@@ -57,15 +53,34 @@ public class User implements Serializable {
     @Column(name = "address")
     private String address;
 
-    @Column(name = "loginUser")
-    private String login;
 
-    @Column(name = "passwordUser")
-    private String password;
+
+//    @ManyToOne
+//    @JoinTable(name = "login_password",
+//            joinColumns = {@JoinColumn(name = "idUser")},
+//            inverseJoinColumns = {@JoinColumn(name = "idLoginPassword")})
+//    private LoginPassword loginPassword;
+//
+////    @JoinTable(name = "logins_passwords", joinColumns = {@JoinColumn(name = "idUser")},
+////            inverseJoinColumns = {@JoinColumn (name = "loginUser")})
+    @Column(name = "loginUser"/*, table = "logins_passwords"*/)
+    private String loginUser;
+//
+////    @JoinTable(name = "logins_passwords", joinColumns = {@JoinColumn(name = "idUser")},
+////            inverseJoinColumns = {@JoinColumn (name = "passwordUser")})
+    @Column(name = "passwordUser"/*, table = "logins_passwords"*/)
+    private String passwordUser;
 
     public User() {
     }
 
+//    public LoginPassword getLoginPassword() {
+//        return loginPassword;
+//    }
+
+//    public void setLoginPassword(LoginPassword loginPassword) {
+//        this.loginPassword = loginPassword;
+//    }
     public Set<Product> getWishList() {
         return wishList;
     }
@@ -82,11 +97,11 @@ public class User implements Serializable {
         this.wishList = wishList;
     }
 
-    public Integer getIdUser() {
+    public Long getIdUser() {
         return idUser;
     }
 
-    public void setIdUser(Integer id) {
+    public void setIdUser(Long id) {
         this.idUser = id;
     }
 
@@ -130,19 +145,19 @@ public class User implements Serializable {
         this.address = address;
     }
 
-    public String getLogin() {
-        return login;
+    public String getLoginUser() {
+        return loginUser;
     }
 
-    public void setLogin(String login) {
-        this.login = login;
+    public void setLoginUser(String login) {
+        this.loginUser = login;
     }
 
-    public String getPassword() {
-        return password;
+    public String getPasswordUser() {
+        return passwordUser;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setPasswordUser(String password) {
+        this.passwordUser = password;
     }
 }

@@ -5,7 +5,7 @@ import java.util.Map;
 
 public interface ProductDao {
 
-    Product selectById(Integer id);
+    Product selectById(Long id);
 
     void insert(Product product);
 

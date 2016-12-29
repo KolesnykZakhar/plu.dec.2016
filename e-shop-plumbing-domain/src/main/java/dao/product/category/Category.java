@@ -1,4 +1,4 @@
-package dao.category;
+package dao.product.category;
 
 import javax.persistence.*;
 
@@ -9,7 +9,7 @@ public class Category {
     @Id
     @GeneratedValue
     @Column(name = "idCategory")
-    private Integer idCategory;
+    private Long idCategory;
 
     @Column(name = "nameCategory", unique = true, nullable = false)
     private String name;
@@ -17,11 +17,11 @@ public class Category {
     public Category() {
     }
 
-    public Integer getIdCategory() {
+    public Long getIdCategory() {
         return idCategory;
     }
 
-    public void setIdCategory(Integer idCategory) {
+    public void setIdCategory(Long idCategory) {
         this.idCategory = idCategory;
     }
 
