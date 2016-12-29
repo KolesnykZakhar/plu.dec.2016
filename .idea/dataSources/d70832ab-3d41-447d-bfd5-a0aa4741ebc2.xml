@@ -48,7 +48,7 @@
       <data-type>varchar(20)|0</data-type>
     </column>
     <column id="24" parent="9" name="passwordUser">
-      <data-type>varchar(12)|0</data-type>
+      <data-type>varchar(20)|0</data-type>
     </column>
     <index id="25" parent="9" name="user_email_uindex">
       <columns>email</columns>

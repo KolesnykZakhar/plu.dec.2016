@@ -1,6 +1,5 @@
-package dao.user;
+package dao;
 
-import dao.product.category.Category;
 import dao.product.category.CategoryDao;
 import dao.product.category.CategoryDaoImpl;
 import dao.product.Product;
@@ -12,8 +11,10 @@ import dao.user.UserDaoImpl;
 import org.hibernate.ObjectNotFoundException;
 import org.junit.Test;
 
-import static dao.Initializer.initializeUser;
+import static dao.DatabaseTools.initializeUser;
+import static dao.DatabaseTools.updateFieldsOfUser;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
 public class UserDaoTest {
@@ -24,13 +25,12 @@ public class UserDaoTest {
         UserDao userDao = new UserDaoImpl();
         CategoryDao categoryDao = new CategoryDaoImpl();
         ProductDao productDao = new ProductDaoImpl();
-
         User user = new User();
-        Category category = new Category();
         Product product = new Product();
 
         //when
-        initializeUser(user, category, product);
+        initializeUser(user,/* category,*/ product);
+        userDao.insert(user);
 
         //then
         assertEquals(userDao.selectById(user.getIdUser()).getFirstName(), (user.getFirstName()));
@@ -42,11 +42,30 @@ public class UserDaoTest {
         assertEquals(userDao.selectById(user.getIdUser()).getPasswordUser(), (user.getPasswordUser()));
         assertEquals(userDao.selectById(user.getIdUser()).getShoppingBasket().get(new ProductDaoImpl().selectById(product.getIdProduct())),
                 (user.getShoppingBasket().get(new ProductDaoImpl().selectById(product.getIdProduct()))));
+        assertTrue(userDao.list().stream().anyMatch(
+                users -> users.getIdUser().equals(user.getIdUser())));
+
+        //when
+        updateFieldsOfUser(user);
+        userDao.update(user);
+
+        //then
+        assertEquals(userDao.selectById(user.getIdUser()).getFirstName(), (user.getFirstName()));
+        assertEquals(userDao.selectById(user.getIdUser()).getLastName(), (user.getLastName()));
+        assertEquals(userDao.selectById(user.getIdUser()).getPhone(), (user.getPhone()));
+        assertEquals(userDao.selectById(user.getIdUser()).getEmail(), (user.getEmail()));
+        assertEquals(userDao.selectById(user.getIdUser()).getAddress(), (user.getAddress()));
+        assertEquals(userDao.selectById(user.getIdUser()).getLoginUser(), (user.getLoginUser()));
+        assertEquals(userDao.selectById(user.getIdUser()).getPasswordUser(), (user.getPasswordUser()));
+        assertEquals(userDao.selectById(user.getIdUser()).getShoppingBasket().get(new ProductDaoImpl().selectById(product.getIdProduct())),
+                (user.getShoppingBasket().get(new ProductDaoImpl().selectById(product.getIdProduct()))));
+        assertTrue(userDao.list().stream().anyMatch(
+                users -> users.getIdUser().equals(user.getIdUser())));
 
         //when
         userDao.remove(user);
         productDao.remove(product);
-        categoryDao.remove(category);
+        categoryDao.remove(product.getCategory());
 
         //then
         try {
@@ -60,7 +79,7 @@ public class UserDaoTest {
         } catch (ObjectNotFoundException ignore) {
         }
         try {
-            categoryDao.selectById(category.getIdCategory()).getName();
+            categoryDao.selectById(product.getCategory().getIdCategory()).getName();
             fail();
         } catch (ObjectNotFoundException ignore) {
         }

@@ -14,43 +14,23 @@ import java.util.Map;
 import java.util.Set;
 import java.util.zip.GZIPOutputStream;
 
-public class Initializer {
+public class DatabaseTools {
+    public static void main(String[] args) {
+
+    }
+    public static void clearDatabaseFromTestingRows(){
+
+    }
+
     public static void initializeCategory(Category category) {
         category.setName("CategoryNameTEST");
     }
 
-    public static void updateCategory(Category category) {
+    public static void updateFieldOfCategory(Category category) {
         category.setName("CategoryNameTEST-UPDATE");
     }
 
-    public static void initializeUser(User user, Category category, Product product) {
-
-        //initialize product
-        initializeProduct(product, category);
-        new ProductDaoImpl().insert(product);
-
-        //initialize shopping basket map
-        Map<Product, Integer> shoppingBasket = new HashMap<>();
-        shoppingBasket.put(product, 1111);
-
-        //initialize wish list set
-        Set<Product> wishList = new HashSet<>();
-        wishList.add(product);
-
-
-        user.setFirstName("FirstNameTEST");
-        user.setLastName("LastNameTEST");
-        user.setPhone("PhoneTEST");
-        user.setEmail("email@TEST");
-        user.setAddress("AddressTEST");
-        user.setLoginUser("LoginTEST");
-        user.setPasswordUser("PasswordTEST");
-        user.setWishList(wishList);
-        user.setShoppingBasket(shoppingBasket);
-        new UserDaoImpl().insert(user);
-    }
-
-    public static void initializeProduct(Product product, Category category) {
+    public static void initializeProduct(Product product/*, Category category*/) {
 
         //initialize map with description
         Map<String, String> descriptionMock = new HashMap<>();
@@ -88,15 +68,56 @@ public class Initializer {
         }
 
         //initialize category
+        Category category = new Category();
         initializeCategory(category);
         new CategoryDaoImpl().insert(category);
 
         //initialize product
-        product.setName("TEST-productName");
+        product.setName("productNameTEST");
         product.setAmount(111);
         product.setPrice(111.11);
         product.setCategory(category);
         product.setDescription(descriptionMock);
         product.setPictures(picturesMock);
+    }
+
+    public static void updateFieldOfProduct(Product product) {
+        product.setName("productNameTEST");
+    }
+
+    public static void initializeUser(User user/*, Category category*/, Product product) {
+
+        //initialize product
+        initializeProduct(product/*, category*/);
+        new ProductDaoImpl().insert(product);
+
+        //initialize shopping basket map
+        Map<Product, Integer> shoppingBasket = new HashMap<>();
+        shoppingBasket.put(product, 1111);
+
+        //initialize wish list set
+        Set<Product> wishList = new HashSet<>();
+        wishList.add(product);
+
+        //initialize user
+        user.setFirstName("FirstNameTEST");
+        user.setLastName("LastNameTEST");
+        user.setPhone("PhoneTEST");
+        user.setEmail("email@TEST");
+        user.setAddress("AddressTEST");
+        user.setLoginUser("LoginTEST");
+        user.setPasswordUser("PasswordTEST");
+        user.setWishList(wishList);
+        user.setShoppingBasket(shoppingBasket);
+    }
+
+    public static void updateFieldsOfUser(User user) {
+        user.setFirstName("FirstNameTEST-UPDATE");
+        user.setLastName("LastNameTEST-UPDATE");
+        user.setPhone("PhoneTEST-UPDATE");
+        user.setEmail("email@TEST-UPDATE");
+        user.setAddress("AddressTEST-UPDATE");
+        user.setLoginUser("LoginTEST-UPDATE");
+        user.setPasswordUser("PasswordTEST-UPDATE");
     }
 }

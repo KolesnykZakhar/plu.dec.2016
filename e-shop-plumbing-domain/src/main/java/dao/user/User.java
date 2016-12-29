@@ -53,34 +53,15 @@ public class User implements Serializable {
     @Column(name = "address")
     private String address;
 
-
-
-//    @ManyToOne
-//    @JoinTable(name = "login_password",
-//            joinColumns = {@JoinColumn(name = "idUser")},
-//            inverseJoinColumns = {@JoinColumn(name = "idLoginPassword")})
-//    private LoginPassword loginPassword;
-//
-////    @JoinTable(name = "logins_passwords", joinColumns = {@JoinColumn(name = "idUser")},
-////            inverseJoinColumns = {@JoinColumn (name = "loginUser")})
-    @Column(name = "loginUser"/*, table = "logins_passwords"*/)
+    @Column(name = "loginUser")
     private String loginUser;
-//
-////    @JoinTable(name = "logins_passwords", joinColumns = {@JoinColumn(name = "idUser")},
-////            inverseJoinColumns = {@JoinColumn (name = "passwordUser")})
-    @Column(name = "passwordUser"/*, table = "logins_passwords"*/)
+
+    @Column(name = "passwordUser")
     private String passwordUser;
 
     public User() {
     }
 
-//    public LoginPassword getLoginPassword() {
-//        return loginPassword;
-//    }
-
-//    public void setLoginPassword(LoginPassword loginPassword) {
-//        this.loginPassword = loginPassword;
-//    }
     public Set<Product> getWishList() {
         return wishList;
     }

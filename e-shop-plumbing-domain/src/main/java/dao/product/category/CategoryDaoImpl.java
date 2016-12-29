@@ -10,28 +10,21 @@ public class CategoryDaoImpl implements CategoryDao {
     @Override
     public Category selectById(Long id) {
         Session session = HibernateUtil.getSessionFactory().openSession();
-//        return (Category) session.createCriteria(Category.class)
-//                .add(Restrictions.eq("idCategory", id))
-//                .uniqueResult();
         return (Category) session.byId(Category.class).getReference(id);
     }
 
     @Override
     public void insert(Category category) {
-//        Session session = HibernateUtil.getSessionFactory().openSession();
-//        Transaction transaction = session.beginTransaction();
-//        session.persist(category);
-//        transaction.commit();
-//        session.close();
-
         Session session = HibernateUtil.getSessionFactory().openSession();
         session.getTransaction().begin();
-        try{
+        try {
             session.save(category);
             session.getTransaction().commit();
-        }catch (Exception e){
+        } catch (Exception e) {
             session.getTransaction().rollback();
-            throw new RuntimeException("Category is not saved to DB");
+            throw e;
+        } finally {
+            session.close();
         }
     }
 
@@ -39,31 +32,29 @@ public class CategoryDaoImpl implements CategoryDao {
     public void update(Category category) {
         Session session = HibernateUtil.getSessionFactory().openSession();
         session.getTransaction().begin();
-        try{
+        try {
             session.merge(category);
             session.getTransaction().commit();
-        }catch (Exception e){
+        } catch (Exception e) {
             session.getTransaction().rollback();
-            throw new RuntimeException("Category is not updated in DB");
+            throw e;
+        } finally {
+            session.close();
         }
-
     }
 
     @Override
     public void remove(Category category) {
-//        Session session = HibernateUtil.getSessionFactory().openSession();
-//        Transaction transaction = session.beginTransaction();
-//        session.delete(category);
-//        transaction.commit();
-//        session.close();
         Session session = HibernateUtil.getSessionFactory().openSession();
         session.getTransaction().begin();
-        try{
+        try {
             session.delete(category);
             session.getTransaction().commit();
-        }catch (Exception e){
+        } catch (Exception e) {
             session.getTransaction().rollback();
-            throw new RuntimeException("Category is not removed from DB");
+            throw e;
+        } finally {
+            session.close();
         }
     }
 

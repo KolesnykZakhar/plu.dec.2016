@@ -1,10 +1,13 @@
-package dao.product.category;
+package dao;
 
+import dao.product.category.Category;
+import dao.product.category.CategoryDao;
+import dao.product.category.CategoryDaoImpl;
 import org.hibernate.ObjectNotFoundException;
 import org.junit.Test;
 
-import static dao.Initializer.initializeCategory;
-import static dao.Initializer.updateCategory;
+import static dao.DatabaseTools.initializeCategory;
+import static dao.DatabaseTools.updateFieldOfCategory;
 import static org.junit.Assert.*;
 
 public class CategoryDaoTest {
@@ -21,16 +24,16 @@ public class CategoryDaoTest {
         //then
         assertEquals(category.getName(), categoryDao.selectById(category.getIdCategory()).getName());
         assertTrue(categoryDao.list().stream().anyMatch(
-                o -> ((Category) o).getIdCategory().equals(category.getIdCategory())));
+                categories -> categories.getIdCategory().equals(category.getIdCategory())));
 
         //when
-        updateCategory(category);
+        updateFieldOfCategory(category);
         categoryDao.update(category);
 
         //then
         assertEquals(category.getName(), categoryDao.selectById(category.getIdCategory()).getName());
         assertTrue(categoryDao.list().stream().anyMatch(
-                o -> ((Category) o).getIdCategory().equals(category.getIdCategory())));
+                categories -> categories.getIdCategory().equals(category.getIdCategory())));
 
         //when
         categoryDao.remove(category);
