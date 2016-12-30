@@ -23,14 +23,14 @@ public class OrderDaoImpl implements OrderDao {
 
     @Override
     public List<Order> listOrders() {
-        // TODO: 30.12.2016 doing by sql request
+        // TODO: 30.12.2016 implement by sql request
         return (List<Order>) HibernateUtil.getSessionFactory().openSession().
                 createCriteria(Order.class).list().stream().distinct().collect(Collectors.toList());
     }
 
     @Override
     public List<Order> listActualOrders() {
-        // TODO: 30.12.2016 doing by sql request
+        // TODO: 30.12.2016 implement by sql request
         return (List<Order>) HibernateUtil.getSessionFactory().openSession().
                 createCriteria(Order.class).list().stream().filter(order -> ((Order) order).getActualOrder().equals(Boolean.TRUE))
                 .distinct().collect(Collectors.toList());
@@ -41,7 +41,7 @@ public class OrderDaoImpl implements OrderDao {
         //        return (List<Order>) HibernateUtil.getSessionFactory().openSession().
 //                createCriteria(Order.class).add(Restrictions.eq("idUser", user.getIdUser()))
 //                .list().stream().distinct().collect(Collectors.toList());
-        // TODO: 30.12.2016 doing by sql request
+        // TODO: 30.12.2016 implement by sql request
         return (List<Order>) HibernateUtil.getSessionFactory().openSession().
                 createCriteria(Order.class).list().stream().distinct()
                 .filter(new Predicate() {
@@ -59,7 +59,7 @@ public class OrderDaoImpl implements OrderDao {
                 .list().stream().filter(order -> ((Order) order).getActualOrder().equals(Boolean.TRUE)
                         && ((Order) order).getUser().getIdUser().equals(user.getIdUser()))
                 .distinct().collect(Collectors.toList());
-        // TODO: 30.12.2016 doing by sql request
+        // TODO: 30.12.2016 implement by sql request
 //        return (List<Order>) HibernateUtil.getSessionFactory().openSession().
 //                createCriteria(Order.class).add(Restrictions.eq("idUser", user.getIdUser()))
 //                .list().stream().filter(order -> ((Order) order).getActualOrder().equals(Boolean.TRUE))
