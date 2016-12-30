@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f48f3e67-aced-480e-8eb0-805a8c3041c2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/e-shop-plumbing-domain/src/main/java/dao/order/OrderDaoImpl.java" afterPath="$PROJECT_DIR$/e-shop-plumbing-domain/src/main/java/dao/order/OrderDaoImpl.java" />
     </list>
     <ignored path="e-shop-plumbing.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -1306,7 +1305,7 @@
       <workItem from="1482998383215" duration="21000" />
       <workItem from="1482999545990" duration="36378000" />
       <workItem from="1483107621551" duration="13174000" />
-      <workItem from="1483122882451" duration="4721000" />
+      <workItem from="1483122882451" duration="4733000" />
     </task>
     <task id="LOCAL-00001" summary="after correcting gitignore">
       <created>1482962861084</created>
@@ -1378,7 +1377,14 @@
       <option name="project" value="LOCAL" />
       <updated>1483127927974</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Order tested done, before todo: implement by sql request">
+      <created>1483127971863</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1483127971863</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1414,7 +1420,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="128067000" />
+    <option name="totallyTimeSpent" value="128079000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
