@@ -12,5 +12,6 @@
         <mapping class="dao.user.User"/>
         <mapping class="dao.product.Product"/>
         <mapping class="dao.product.category.Category"/>
+        <mapping class="dao.order.Order"/>
     </session-factory>
 </hibernate-configuration>

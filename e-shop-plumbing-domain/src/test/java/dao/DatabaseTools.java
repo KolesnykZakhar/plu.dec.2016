@@ -19,7 +19,7 @@ public class DatabaseTools {
 
     @Ignore
     @Test
-    public static void clearDatabaseFromTestingRows() {
+    public void clearDatabaseFromTestingRows() {
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction transaction = session.getTransaction();
         transaction.begin();

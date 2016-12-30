@@ -2,17 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f48f3e67-aced-480e-8eb0-805a8c3041c2" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-shop-plumbing-domain/src/main/java/dao/order/Order.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-shop-plumbing-domain/src/main/java/dao/order/OrderDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e-shop-plumbing-domain/src/main/java/dao/order/OrderDaoImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/d70832ab-3d41-447d-bfd5-a0aa4741ebc2.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/d70832ab-3d41-447d-bfd5-a0aa4741ebc2.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/e-shop-plumbing-domain/src/main/java/dao/product/Product.java" afterPath="$PROJECT_DIR$/e-shop-plumbing-domain/src/main/java/dao/product/Product.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/e-shop-plumbing-domain/src/main/java/dao/product/ProductDaoImpl.java" afterPath="$PROJECT_DIR$/e-shop-plumbing-domain/src/main/java/dao/product/ProductDaoImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/e-shop-plumbing-domain/src/main/java/Main.java" afterPath="$PROJECT_DIR$/e-shop-plumbing-domain/src/main/java/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/e-shop-plumbing-domain/src/main/java/dao/product/category/Category.java" afterPath="$PROJECT_DIR$/e-shop-plumbing-domain/src/main/java/dao/product/category/Category.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/e-shop-plumbing-domain/src/main/java/dao/product/category/CategoryDaoImpl.java" afterPath="$PROJECT_DIR$/e-shop-plumbing-domain/src/main/java/dao/product/category/CategoryDaoImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/e-shop-plumbing-domain/src/main/java/dao/user/User.java" afterPath="$PROJECT_DIR$/e-shop-plumbing-domain/src/main/java/dao/user/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/e-shop-plumbing-domain/src/main/java/dao/user/UserDaoImpl.java" afterPath="$PROJECT_DIR$/e-shop-plumbing-domain/src/main/java/dao/user/UserDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/e-shop-plumbing-domain/src/test/java/dao/CategoryDaoTest.java" afterPath="$PROJECT_DIR$/e-shop-plumbing-domain/src/test/java/dao/CategoryDaoTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/e-shop-plumbing-domain/src/main/resources/hibernate.cfg.xml" afterPath="$PROJECT_DIR$/e-shop-plumbing-domain/src/main/resources/hibernate.cfg.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/e-shop-plumbing-domain/src/test/java/dao/DatabaseTools.java" afterPath="$PROJECT_DIR$/e-shop-plumbing-domain/src/test/java/dao/DatabaseTools.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/e-shop-plumbing-domain/src/test/java/dao/ProductDaoTest.java" afterPath="$PROJECT_DIR$/e-shop-plumbing-domain/src/test/java/dao/ProductDaoTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/e-shop-plumbing-domain/src/test/java/dao/UserDaoTest.java" afterPath="$PROJECT_DIR$/e-shop-plumbing-domain/src/test/java/dao/UserDaoTest.java" />
     </list>
     <ignored path="e-shop-plumbing.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -55,138 +54,14 @@
     <favorites_list name="e-shop-plumbing" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="UserDaoTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/e-shop-plumbing-domain/src/test/java/dao/UserDaoTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1370">
-              <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DatabaseTools.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/e-shop-plumbing-domain/src/test/java/dao/DatabaseTools.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2647#2648#0" expanded="true" />
-                <element signature="e#2707#2708#0" expanded="true" />
-                <element signature="e#2774#2775#0" expanded="true" />
-                <element signature="e#2841#2842#0" expanded="true" />
-                <element signature="e#4863#4864#0" expanded="true" />
-                <element signature="e#4927#4928#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="plumbing.categories" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/75c53998/d70832ab-3d41-447d-bfd5-a0aa4741ebc2/plumbing.categories">
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Product.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/e-shop-plumbing-domain/src/main/java/dao/product/Product.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-852">
-              <caret line="26" column="21" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProductDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/e-shop-plumbing-domain/src/main/java/dao/product/ProductDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProductDaoImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/e-shop-plumbing-domain/src/main/java/dao/product/ProductDaoImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1102">
-              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserDaoImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/e-shop-plumbing-domain/src/main/java/dao/user/UserDaoImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1177">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Category.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/e-shop-plumbing-domain/src/main/java/dao/product/category/Category.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
-              <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CategoryDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/e-shop-plumbing-domain/src/main/java/dao/product/category/CategoryDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CategoryDaoImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/e-shop-plumbing-domain/src/main/java/dao/product/category/CategoryDaoImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1152">
-              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JUnit4 Test Class" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -228,8 +103,6 @@
         <option value="$PROJECT_DIR$/e-shop-plumbing-domain/src/main/java/dao/user/loginPasswordInfo/LoginPasswordDao.java" />
         <option value="$PROJECT_DIR$/e-shop-plumbing-domain/src/main/java/dao/user/loginPasswordInfo/LoginPasswordDaoImpl.java" />
         <option value="$PROJECT_DIR$/e-shop-plumbing-domain/src/main/java/dao/user/loginPasswordInfo/LoginPassword.java" />
-        <option value="$PROJECT_DIR$/e-shop-plumbing-domain/src/main/resources/hibernate.cfg.xml" />
-        <option value="$PROJECT_DIR$/e-shop-plumbing-domain/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/e-shop-plumbing-domain/src/test/java/dao/DaoTest.java" />
         <option value="$PROJECT_DIR$/e-shop-plumbing-domain/src/test/java/dao/UserTest.java" />
         <option value="$PROJECT_DIR$/e-shop-plumbing-domain/src/test/java/dao/user/UserTest.java" />
@@ -245,14 +118,19 @@
         <option value="$PROJECT_DIR$/e-shop-plumbing-domain/src/test/java/dao/ToolsDatabase.java" />
         <option value="$PROJECT_DIR$/e-shop-plumbing-domain/src/test/java/dao/CategoryDaoTest.java" />
         <option value="$PROJECT_DIR$/e-shop-plumbing-domain/src/test/java/dao/ProductDaoTest.java" />
-        <option value="$PROJECT_DIR$/e-shop-plumbing-domain/src/main/java/dao/user/User.java" />
         <option value="$PROJECT_DIR$/e-shop-plumbing-domain/src/main/java/dao/product/category/CategoryDaoImpl.java" />
         <option value="$PROJECT_DIR$/e-shop-plumbing-domain/src/main/java/dao/product/ProductDaoImpl.java" />
         <option value="$PROJECT_DIR$/e-shop-plumbing-domain/src/main/java/dao/user/UserDaoImpl.java" />
-        <option value="$PROJECT_DIR$/e-shop-plumbing-domain/src/main/java/dao/product/category/Category.java" />
         <option value="$PROJECT_DIR$/e-shop-plumbing-domain/src/main/java/dao/product/Product.java" />
-        <option value="$PROJECT_DIR$/e-shop-plumbing-domain/src/test/java/dao/DatabaseTools.java" />
         <option value="$PROJECT_DIR$/e-shop-plumbing-domain/src/test/java/dao/UserDaoTest.java" />
+        <option value="$PROJECT_DIR$/e-shop-plumbing-domain/src/test/java/dao/DatabaseTools.java" />
+        <option value="$PROJECT_DIR$/e-shop-plumbing-domain/src/main/java/dao/order/OrderDao.java" />
+        <option value="$PROJECT_DIR$/e-shop-plumbing-domain/src/main/java/dao/order/OrderDaoImpl.java" />
+        <option value="$PROJECT_DIR$/e-shop-plumbing-domain/src/main/resources/hibernate.cfg.xml" />
+        <option value="$PROJECT_DIR$/e-shop-plumbing-domain/src/main/java/dao/user/User.java" />
+        <option value="$PROJECT_DIR$/e-shop-plumbing-domain/src/main/java/dao/product/category/Category.java" />
+        <option value="$PROJECT_DIR$/e-shop-plumbing-domain/src/main/java/dao/order/Order.java" />
+        <option value="$PROJECT_DIR$/e-shop-plumbing-domain/src/main/java/Main.java" />
       </list>
     </option>
   </component>
@@ -328,7 +206,10 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="Scratches">
+        <subPane />
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -358,6 +239,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="e-shop-plumbing-domain" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="e-shop-plumbing" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="e-shop-plumbing" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="e-shop-plumbing-domain" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="target" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -601,9 +500,42 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="e-shop-plumbing" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="e-shop-plumbing" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="e-shop-plumbing-domain" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="order" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -612,7 +544,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="D:\Program Files (x86)\nodejs\node.exe" />
-    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="DDL Data Source&#10;MySQL" />
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.38695163" />
@@ -648,7 +580,7 @@
       <recent name="D:\install\Java BUILD\Project\[comercial]\e-shop-plumbing\e-shop-plumbing-domain\src\test\java\dao\resources\pictures" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UserDaoTest">
+  <component name="RunManager" selected="JUnit.dao in e-shop-plumbing-domain">
     <configuration default="false" name="dao in e-shop-plumbing-domain" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -675,73 +607,6 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="All in e-shop-plumbing-domain" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="e-shop-plumbing-domain" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="package" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="DatabaseTools" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="dao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="dao.DatabaseTools" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="e-shop-plumbing-domain" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="UserDaoTest.selectById_insert_remove_with_database_category_product_user" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="dao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="e-shop-plumbing-domain" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="dao" />
-      <option name="MAIN_CLASS_NAME" value="dao.UserDaoTest" />
-      <option name="METHOD_NAME" value="selectById_insert_remove_with_database_category_product_user" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
     <configuration default="false" name="UserDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -756,6 +621,68 @@
       <option name="MAIN_CLASS_NAME" value="dao.UserDaoTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="e-shop-plumbing-domain" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="DatabaseTools.clearDatabaseFromTestingRows" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="e-shop-plumbing-domain" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="dao" />
+      <option name="MAIN_CLASS_NAME" value="dao.DatabaseTools" />
+      <option name="METHOD_NAME" value="clearDatabaseFromTestingRows" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="All in e-shop-plumbing-domain" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="e-shop-plumbing-domain" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="package" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -1222,18 +1149,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.dao in e-shop-plumbing-domain" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.All in e-shop-plumbing-domain" />
-      <item index="2" class="java.lang.String" itemvalue="Application.DatabaseTools" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.UserDaoTest.selectById_insert_remove_with_database_category_product_user" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.UserDaoTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.UserDaoTest" />
+      <item index="2" class="java.lang.String" itemvalue="Application.Main" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.DatabaseTools.clearDatabaseFromTestingRows" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.All in e-shop-plumbing-domain" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.UserDaoTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.dao in e-shop-plumbing-domain" />
-        <item index="2" class="java.lang.String" itemvalue="Application.DatabaseTools" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.UserDaoTest.selectById_insert_remove_with_database_category_product_user" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.All in e-shop-plumbing-domain" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.dao in e-shop-plumbing-domain" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.DatabaseTools.clearDatabaseFromTestingRows" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.All in e-shop-plumbing-domain" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.UserDaoTest" />
       </list>
     </recent_temporary>
   </component>
@@ -1258,7 +1185,8 @@
       <workItem from="1482962785232" duration="228000" />
       <workItem from="1482963691517" duration="814000" />
       <workItem from="1482998383215" duration="21000" />
-      <workItem from="1482999545990" duration="29214000" />
+      <workItem from="1482999545990" duration="36378000" />
+      <workItem from="1483107621551" duration="3682000" />
     </task>
     <task id="LOCAL-00001" summary="after correcting gitignore">
       <created>1482962861084</created>
@@ -1309,47 +1237,54 @@
       <option name="project" value="LOCAL" />
       <updated>1483029771989</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Tools to clear Database from tested rows is WORKING">
+      <created>1483037127416</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1483037127416</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_e-shop-plumbing-domain - 2016.12.29 at 18h 51m 10s.xml">
-      <configuration name="All in e-shop-plumbing-domain" configurationId="JUnit" />
+    <history-entry file="DatabaseTools_clearDatabaseFromTestingRows - 2016.12.29 at 22h 59m 16s.xml">
+      <configuration name="DatabaseTools.clearDatabaseFromTestingRows" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_e-shop-plumbing-domain - 2016.12.29 at 18h 54m 52s.xml">
-      <configuration name="All in e-shop-plumbing-domain" configurationId="JUnit" />
+    <history-entry file="DatabaseTools_clearDatabaseFromTestingRows - 2016.12.29 at 23h 00m 47s.xml">
+      <configuration name="DatabaseTools.clearDatabaseFromTestingRows" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserDaoTest - 2016.12.29 at 20h 43m 39s.xml">
-      <configuration name="UserDaoTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UserDaoTest_selectById_insert_remove_with_database_category_product_user - 2016.12.29 at 20h 41m 11s.xml">
-      <configuration name="UserDaoTest.selectById_insert_remove_with_database_category_product_user" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="dao_in_e-shop-plumbing-domain - 2016.12.29 at 18h 47m 49s.xml">
+    <history-entry file="dao_in_e-shop-plumbing-domain - 2016.12.29 at 22h 55m 23s.xml">
       <configuration name="dao in e-shop-plumbing-domain" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="dao_in_e-shop-plumbing-domain - 2016.12.29 at 18h 48m 45s.xml">
+    <history-entry file="dao_in_e-shop-plumbing-domain - 2016.12.29 at 22h 56m 23s.xml">
       <configuration name="dao in e-shop-plumbing-domain" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="dao_in_e-shop-plumbing-domain - 2016.12.29 at 19h 13m 08s.xml">
+    <history-entry file="dao_in_e-shop-plumbing-domain - 2016.12.29 at 22h 58m 58s.xml">
       <configuration name="dao in e-shop-plumbing-domain" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="dao_in_e-shop-plumbing-domain - 2016.12.29 at 19h 13m 42s.xml">
+    <history-entry file="dao_in_e-shop-plumbing-domain - 2016.12.29 at 22h 59m 41s.xml">
       <configuration name="dao in e-shop-plumbing-domain" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="dao_in_e-shop-plumbing-domain - 2016.12.29 at 20h 42m 39s.xml">
+    <history-entry file="dao_in_e-shop-plumbing-domain - 2016.12.29 at 23h 01m 08s.xml">
       <configuration name="dao in e-shop-plumbing-domain" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="dao_user_in_e-shop-plumbing-domain - 2016.12.29 at 18h 50m 47s.xml">
-      <configuration name="dao.user in e-shop-plumbing-domain" configurationId="JUnit" />
+    <history-entry file="dao_in_e-shop-plumbing-domain - 2016.12.29 at 23h 11m 14s.xml">
+      <configuration name="dao in e-shop-plumbing-domain" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="dao_in_e-shop-plumbing-domain - 2016.12.29 at 23h 11m 50s.xml">
+      <configuration name="dao in e-shop-plumbing-domain" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="dao_in_e-shop-plumbing-domain - 2016.12.30 at 17h 19m 35s.xml">
+      <configuration name="dao in e-shop-plumbing-domain" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103008000" />
+    <option name="totallyTimeSpent" value="113854000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1360,7 +1295,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921588" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33069083" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33069083" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1670247" sideWeight="0.30236486" order="2" side_tool="true" content_ui="tabs" />
@@ -1368,12 +1303,12 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19011815" sideWeight="0.6976351" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921588" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20833333" sideWeight="0.50396377" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09667025" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14607948" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20676692" sideWeight="0.30236486" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997735" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20676692" sideWeight="0.30236486" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1450,7 +1385,8 @@
     <MESSAGE value="changed id to LONG. After trying relocate login and password columns to own table" />
     <MESSAGE value="Category full testing, working on Product testing" />
     <MESSAGE value="Full tested, working on tools for clear DB from test rows" />
-    <option name="LAST_COMMIT_MESSAGE" value="Full tested, working on tools for clear DB from test rows" />
+    <MESSAGE value="Tools to clear Database from tested rows is WORKING" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tools to clear Database from tested rows is WORKING" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1513,15 +1449,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/4.3.8.Final/hibernate-core-4.3.8.Final-sources.jar!/org/hibernate/Session.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-293">
-          <caret line="531" column="16" selection-start-line="531" selection-start-column="16" selection-end-line="531" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/75c53998/d70832ab-3d41-447d-bfd5-a0aa4741ebc2/plumbing.category_product">
+    <entry file="dbDummy://dbtable:/75c53998/d70832ab-3d41-447d-bfd5-a0aa4741ebc2/plumbing.user">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1534,7 +1462,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/75c53998/d70832ab-3d41-447d-bfd5-a0aa4741ebc2/plumbing.category_product">
+    <entry file="dbDummy://dbtable:/75c53998/d70832ab-3d41-447d-bfd5-a0aa4741ebc2/plumbing.user">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1547,7 +1475,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/75c53998/d70832ab-3d41-447d-bfd5-a0aa4741ebc2/plumbing.category_product">
+    <entry file="dbDummy://dbtable:/75c53998/d70832ab-3d41-447d-bfd5-a0aa4741ebc2/plumbing.user">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1560,7 +1488,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/75c53998/d70832ab-3d41-447d-bfd5-a0aa4741ebc2/plumbing.category_product">
+    <entry file="dbDummy://dbtable:/75c53998/d70832ab-3d41-447d-bfd5-a0aa4741ebc2/plumbing.user">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1573,15 +1501,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/4.3.8.Final/hibernate-core-4.3.8.Final-sources.jar!/org/hibernate/Criteria.java">
+    <entry file="dbDummy://dbtable:/75c53998/d70832ab-3d41-447d-bfd5-a0aa4741ebc2/plumbing.user">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/75c53998/d70832ab-3d41-447d-bfd5-a0aa4741ebc2/plumbing.user">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/75c53998/d70832ab-3d41-447d-bfd5-a0aa4741ebc2/plumbing.user">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e-shop-plumbing-domain/src/main/java/dao/product/category/CategoryDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="177">
-          <caret line="545" column="16" selection-start-line="545" selection-start-column="16" selection-end-line="545" selection-end-column="16" />
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/75c53998/d70832ab-3d41-447d-bfd5-a0aa4741ebc2/plumbing.category_product">
+    <entry file="dbDummy://dbtable:/75c53998/d70832ab-3d41-447d-bfd5-a0aa4741ebc2/plumbing.user">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1594,254 +1561,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/75c53998/d70832ab-3d41-447d-bfd5-a0aa4741ebc2/plumbing.category_product">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/75c53998/d70832ab-3d41-447d-bfd5-a0aa4741ebc2/plumbing.category_product">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/75c53998/d70832ab-3d41-447d-bfd5-a0aa4741ebc2/plumbing.category_product">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/75c53998/d70832ab-3d41-447d-bfd5-a0aa4741ebc2/plumbing.category_product">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/75c53998/d70832ab-3d41-447d-bfd5-a0aa4741ebc2/plumbing.description_product">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/75c53998/d70832ab-3d41-447d-bfd5-a0aa4741ebc2/plumbing.description_product">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/75c53998/d70832ab-3d41-447d-bfd5-a0aa4741ebc2/plumbing.category_product">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/75c53998/d70832ab-3d41-447d-bfd5-a0aa4741ebc2/plumbing.description_product">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/75c53998/d70832ab-3d41-447d-bfd5-a0aa4741ebc2/plumbing.pictures_product">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/75c53998/d70832ab-3d41-447d-bfd5-a0aa4741ebc2/plumbing.pictures_product">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/75c53998/d70832ab-3d41-447d-bfd5-a0aa4741ebc2/plumbing.description_product">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/75c53998/d70832ab-3d41-447d-bfd5-a0aa4741ebc2/plumbing.pictures_product">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/75c53998/d70832ab-3d41-447d-bfd5-a0aa4741ebc2/plumbing.product">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/75c53998/d70832ab-3d41-447d-bfd5-a0aa4741ebc2/plumbing.product">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/75c53998/d70832ab-3d41-447d-bfd5-a0aa4741ebc2/plumbing.pictures_product">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/75c53998/d70832ab-3d41-447d-bfd5-a0aa4741ebc2/plumbing.product">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/75c53998/d70832ab-3d41-447d-bfd5-a0aa4741ebc2/plumbing.shopping_basket">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/75c53998/d70832ab-3d41-447d-bfd5-a0aa4741ebc2/plumbing.shopping_basket">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/75c53998/d70832ab-3d41-447d-bfd5-a0aa4741ebc2/plumbing.product">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/75c53998/d70832ab-3d41-447d-bfd5-a0aa4741ebc2/plumbing.shopping_basket">
+    <entry file="dbDummy://dbtable:/75c53998/d70832ab-3d41-447d-bfd5-a0aa4741ebc2/plumbing.user">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1880,7 +1600,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/75c53998/d70832ab-3d41-447d-bfd5-a0aa4741ebc2/plumbing.shopping_basket">
+    <entry file="dbDummy://dbtable:/75c53998/d70832ab-3d41-447d-bfd5-a0aa4741ebc2/plumbing.user">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1906,7 +1626,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/75c53998/d70832ab-3d41-447d-bfd5-a0aa4741ebc2/plumbing.wish_list">
+    <entry file="dbDummy://dbtable:/75c53998/d70832ab-3d41-447d-bfd5-a0aa4741ebc2/plumbing.user">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1919,7 +1639,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/75c53998/d70832ab-3d41-447d-bfd5-a0aa4741ebc2/plumbing.wish_list">
+    <entry file="dbDummy://dbtable:/75c53998/d70832ab-3d41-447d-bfd5-a0aa4741ebc2/plumbing.user">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1932,7 +1652,136 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/75c53998/d70832ab-3d41-447d-bfd5-a0aa4741ebc2/plumbing.wish_list">
+    <entry file="file://$PROJECT_DIR$/e-shop-plumbing-domain/src/main/java/dao/user/UserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/75c53998/d70832ab-3d41-447d-bfd5-a0aa4741ebc2/plumbing.order_product">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/75c53998/d70832ab-3d41-447d-bfd5-a0aa4741ebc2/plumbing.user">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/75c53998/d70832ab-3d41-447d-bfd5-a0aa4741ebc2/plumbing.user">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/75c53998/d70832ab-3d41-447d-bfd5-a0aa4741ebc2/plumbing.user">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/75c53998/d70832ab-3d41-447d-bfd5-a0aa4741ebc2/plumbing.user">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/75c53998/d70832ab-3d41-447d-bfd5-a0aa4741ebc2/plumbing.user">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/75c53998/d70832ab-3d41-447d-bfd5-a0aa4741ebc2/plumbing.user">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/75c53998/d70832ab-3d41-447d-bfd5-a0aa4741ebc2/plumbing.user">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e-shop-plumbing-domain/src/main/java/dao/user/UserDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e-shop-plumbing-domain/src/test/java/dao/UserDaoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/75c53998/d70832ab-3d41-447d-bfd5-a0aa4741ebc2/plumbing.user">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1949,7 +1798,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -1958,55 +1806,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/e-shop-plumbing-domain/src/test/java/dao/DatabaseTools.java">
+    <entry file="file://$PROJECT_DIR$/e-shop-plumbing-domain/src/main/java/dao/order/OrderDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
+        <state relative-caret-position="225">
+          <caret line="9" column="35" selection-start-line="0" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2647#2648#0" expanded="true" />
-            <element signature="e#2707#2708#0" expanded="true" />
-            <element signature="e#2774#2775#0" expanded="true" />
-            <element signature="e#2841#2842#0" expanded="true" />
-            <element signature="e#4863#4864#0" expanded="true" />
-            <element signature="e#4927#4928#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/e-shop-plumbing-domain/src/main/java/dao/product/category/Category.java">
+    <entry file="file://$PROJECT_DIR$/e-shop-plumbing-domain/src/main/resources/hibernate.cfg.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+        <state relative-caret-position="375">
+          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/e-shop-plumbing-domain/src/main/java/dao/product/category/CategoryDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+    <entry file="dbDummy://dbtable:/75c53998/d70832ab-3d41-447d-bfd5-a0aa4741ebc2/plumbing.category_product">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/e-shop-plumbing-domain/src/main/java/dao/product/category/CategoryDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1152">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+    <entry file="dbDummy://dbtable:/75c53998/d70832ab-3d41-447d-bfd5-a0aa4741ebc2/plumbing.shopping_basket">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/e-shop-plumbing-domain/src/main/java/dao/product/Product.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-852">
-          <caret line="26" column="21" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2023,61 +1863,147 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/e-shop-plumbing-domain/src/main/java/dao/product/ProductDao.java">
+    <entry file="file://$PROJECT_DIR$/e-shop-plumbing-domain/src/test/java/dao/DatabaseTools.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-          <folding />
+        <state relative-caret-position="200">
+          <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/75c53998/d70832ab-3d41-447d-bfd5-a0aa4741ebc2/plumbing.wish_list">
+    <entry file="dbDummy://dbtable:/75c53998/d70832ab-3d41-447d-bfd5-a0aa4741ebc2/plumbing.product">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/75c53998/d70832ab-3d41-447d-bfd5-a0aa4741ebc2/plumbing.pictures_product">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
         </state>
       </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/e-shop-plumbing-domain/src/main/java/dao/product/ProductDaoImpl.java">
+    <entry file="file://$PROJECT_DIR$/e-shop-plumbing-domain/src/main/java/dao/product/Product.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1102">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        <state relative-caret-position="700">
+          <caret line="31" column="68" selection-start-line="28" selection-start-column="4" selection-end-line="31" selection-end-column="68" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e-shop-plumbing-domain/src/main/java/dao/product/category/Category.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="7" column="45" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/75c53998/d70832ab-3d41-447d-bfd5-a0aa4741ebc2/plumbing.users">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e-shop-plumbing-domain/src/main/java/dao/HibernateUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/e-shop-plumbing-domain/src/main/java/dao/user/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="29" column="34" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
+        <state relative-caret-position="1475">
+          <caret line="59" column="32" selection-start-line="59" selection-start-column="32" selection-end-line="59" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/e-shop-plumbing-domain/src/main/java/dao/user/UserDaoImpl.java">
+    <entry file="file://$PROJECT_DIR$/e-shop-plumbing-domain/src/main/java/dao/order/OrderDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1177">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        <state relative-caret-position="825">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#604#605#0" expanded="true" />
+            <element signature="e#652#653#0" expanded="true" />
+            <element signature="e#726#727#0" expanded="true" />
+            <element signature="e#774#775#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/75c53998/d70832ab-3d41-447d-bfd5-a0aa4741ebc2/plumbing.orders">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/75c53998/d70832ab-3d41-447d-bfd5-a0aa4741ebc2/plumbing.orders_product">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e-shop-plumbing-domain/src/main/java/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="25" column="35" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/e-shop-plumbing-domain/src/test/java/dao/UserDaoTest.java">
+    <entry file="file://$PROJECT_DIR$/e-shop-plumbing-domain/src/main/java/dao/order/Order.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1370">
-          <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+        <state relative-caret-position="25">
+          <caret line="34" column="34" selection-start-line="34" selection-start-column="34" selection-end-line="34" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
