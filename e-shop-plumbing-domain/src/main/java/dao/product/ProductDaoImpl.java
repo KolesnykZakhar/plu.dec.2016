@@ -5,6 +5,7 @@ import org.hibernate.Session;
 import org.hibernate.criterion.Restrictions;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class ProductDaoImpl implements ProductDao {
     @Override
@@ -63,7 +64,7 @@ public class ProductDaoImpl implements ProductDao {
 
     @Override
     public List<Product> list() {
-        return HibernateUtil.getSessionFactory().openSession().
-                createCriteria(Product.class).list();
+        return (List<Product>) HibernateUtil.getSessionFactory().openSession().
+                createCriteria(Product.class).list().stream().distinct().collect(Collectors.toList());
     }
 }

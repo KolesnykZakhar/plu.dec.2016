@@ -5,6 +5,7 @@ import org.hibernate.Session;
 import org.hibernate.criterion.Restrictions;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class UserDaoImpl implements UserDao {
     @Override
@@ -18,8 +19,8 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public List<User> list() {
-        return HibernateUtil.getSessionFactory().openSession().
-                createCriteria(User.class).list();
+        return (List<User>) HibernateUtil.getSessionFactory().openSession().
+                createCriteria(User.class).list().stream().distinct().collect(Collectors.toList());
     }
 
     @Override

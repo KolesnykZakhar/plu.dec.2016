@@ -10,7 +10,7 @@ import java.util.Map;
 
 @Entity
 @Table(name = "orders")
-public class Order implements Serializable{
+public class Order implements Serializable {
 
     @Id
     @GeneratedValue
@@ -26,18 +26,6 @@ public class Order implements Serializable{
     private
     Timestamp dateOrder;
 
-//    @ManyToOne
-//    @JoinTable(name = "category_product",
-//            joinColumns = {@JoinColumn(name = "idProduct")},
-//            inverseJoinColumns = {@JoinColumn(name = "idCategory")})
-
-//    @ManyToOne
-//    @JoinColumn(name = "idUser")
-//    @OneToOne
-//    @Column(name = "idUser")
-//@OneToOne(fetch = FetchType.EAGER, mappedBy = "user", cascade=CascadeType.PERSIST)
-
-
     @ManyToOne
     @JoinColumn(name = "idUser")
     private User user;
@@ -46,7 +34,7 @@ public class Order implements Serializable{
     @CollectionTable(name = "orders_product",
             joinColumns = @JoinColumn(name = "idOrder"))
     @MapKeyJoinColumn(name = "idProduct")
-//    @Column(name = "amount")
+    @Column(name = "amount")
     private Map<Product, Integer> orderMap;
 
     public Order() {

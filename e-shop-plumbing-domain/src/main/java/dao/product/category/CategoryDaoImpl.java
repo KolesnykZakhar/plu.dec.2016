@@ -6,6 +6,7 @@ import org.hibernate.Session;
 import org.hibernate.criterion.Restrictions;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class CategoryDaoImpl implements CategoryDao {
     @Override
@@ -64,7 +65,7 @@ public class CategoryDaoImpl implements CategoryDao {
 
     @Override
     public List<Category> list() {
-        return HibernateUtil.getSessionFactory().openSession().
-                createCriteria(Category.class).list();
+        return (List<Category>) HibernateUtil.getSessionFactory().openSession().
+                createCriteria(Category.class).list().stream().distinct().collect(Collectors.toList());
     }
 }
