@@ -17,9 +17,7 @@ import java.util.zip.GZIPOutputStream;
 
 public class DatabaseTools {
 
-    @Ignore
-    @Test
-    public void clearDatabaseFromTestingRows() {
+    public static void clearDatabaseFromTestingRows() {
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction transaction = session.getTransaction();
         transaction.begin();
