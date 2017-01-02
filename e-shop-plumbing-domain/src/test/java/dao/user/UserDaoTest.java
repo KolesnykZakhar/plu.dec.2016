@@ -1,4 +1,4 @@
-package dao;
+package dao.user;
 
 import dao.product.category.CategoryDao;
 import dao.product.category.CategoryDaoImpl;

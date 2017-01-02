@@ -1,4 +1,4 @@
-package dao;
+package dao.product.category;
 
 import dao.product.category.Category;
 import dao.product.category.CategoryDao;

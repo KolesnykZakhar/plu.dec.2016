@@ -1,4 +1,4 @@
-package dao;
+package dao.order;
 
 import dao.order.Order;
 import dao.order.OrderDao;
