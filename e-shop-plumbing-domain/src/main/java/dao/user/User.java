@@ -59,6 +59,9 @@ public class User implements Serializable {
     @Column(name = "passwordUser")
     private String passwordUser;
 
+    @Column(name = "isAdmin")
+    private boolean isAdmin;
+
     @Override
     public boolean equals(Object obj) {
         if (obj == this) {
@@ -77,6 +80,14 @@ public class User implements Serializable {
     }
 
     public User() {
+    }
+
+    public boolean isAdmin() {
+        return isAdmin;
+    }
+
+    public void setAdmin(boolean admin) {
+        isAdmin = admin;
     }
 
     public Set<Product> getWishList() {

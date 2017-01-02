@@ -2,11 +2,13 @@ import dao.order.OrderDaoImpl;
 import dao.product.ProductDaoImpl;
 import dao.product.category.Category;
 import dao.product.category.CategoryDaoImpl;
+import dao.user.User;
 import dao.user.UserDaoImpl;
 
 
 public class Main {
     public static void main(String[] args) {
+//        System.out.println(new UserDaoImpl().selectById(1).isAdmin());
 //        new ProductDaoImpl().listByCategory(new CategoryDaoImpl().selectById(1)).forEach(System.out::println);
 
 //        Category category = new Category();
