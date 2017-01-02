@@ -6,7 +6,7 @@ import dao.user.User;
 import java.util.List;
 
 public interface OrderDao {
-    Order selectById(Long id);
+    Order selectById(Integer id);
 
     List<Order> listOrders();
 

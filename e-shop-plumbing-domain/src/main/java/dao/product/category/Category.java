@@ -10,19 +10,42 @@ public class Category implements Serializable {
     @Id
     @GeneratedValue
     @Column(name = "idCategory")
-    private Long idCategory;
+    private Integer idCategory;
 
     @Column(name = "nameCategory", unique = true, nullable = false)
     private String nameCategory;
 
-    public Category() {
-    }
 
-    public Long getIdCategory() {
+    @Override
+    public int hashCode() {
         return idCategory;
     }
 
-    public void setIdCategory(Long idCategory) {
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == this) {
+            return true;
+        }
+        if (!(obj instanceof Category)) {
+            return false;
+        }
+        Category order = (Category) obj;
+        return order.idCategory.equals(idCategory);
+    }
+
+    @Override
+    public String toString() {
+        return nameCategory + ", №: " + idCategory;
+    }
+
+    public Category() {
+    }
+
+    public Integer getIdCategory() {
+        return idCategory;
+    }
+
+    public void setIdCategory(Integer idCategory) {
         this.idCategory = idCategory;
     }
 

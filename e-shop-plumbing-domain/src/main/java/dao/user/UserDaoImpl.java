@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 
 public class UserDaoImpl implements UserDao {
     @Override
-    public User selectById(Long id) {
+    public User selectById(Integer id) {
         Session session = HibernateUtil.getSessionFactory().openSession();
         User user = (User) session.createCriteria(User.class)
                 .add(Restrictions.eq("idUser", id)).uniqueResult();

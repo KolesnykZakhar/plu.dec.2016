@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
 public class OrderDaoImpl implements OrderDao {
 
     @Override
-    public Order selectById(Long id) {
+    public Order selectById(Integer id) {
         Session session = HibernateUtil.getSessionFactory().openSession();
         Order order = (Order) session.createCriteria(Order.class)
                 .add(Restrictions.eq("idOrder", id)).uniqueResult();
@@ -47,7 +47,7 @@ public class OrderDaoImpl implements OrderDao {
                 .filter(new Predicate() {
                     @Override
                     public boolean test(Object o) {
-                        return ((Order) o).getUser().getIdUser().equals(user.getIdUser());
+                        return ((Order) o).getUser().getIdUser() == user.getIdUser();
                     }
                 }).collect(Collectors.toList());
     }
@@ -57,7 +57,7 @@ public class OrderDaoImpl implements OrderDao {
         return (List<Order>) HibernateUtil.getSessionFactory().openSession().
                 createCriteria(Order.class)
                 .list().stream().filter(order -> ((Order) order).getActualOrder().equals(Boolean.TRUE)
-                        && ((Order) order).getUser().getIdUser().equals(user.getIdUser()))
+                        && ((Order) order).getUser().getIdUser() == user.getIdUser())
                 .distinct().collect(Collectors.toList());
         // TODO: 30.12.2016 implement by sql request
 //        return (List<Order>) HibernateUtil.getSessionFactory().openSession().

@@ -4,7 +4,7 @@ package dao.user;
 import java.util.List;
 
 public interface UserDao {
-    User selectById(Long id);
+    User selectById(Integer id);
 
     List<User> list();
 

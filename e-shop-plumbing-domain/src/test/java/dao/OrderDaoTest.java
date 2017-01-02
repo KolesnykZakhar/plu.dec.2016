@@ -26,18 +26,18 @@ public class OrderDaoTest {
         UserDao userDao = new UserDaoImpl();
         ProductDao productDao = new ProductDaoImpl();
 
-        User userWithOrder = userDao.selectById(1L);
-        User userWithOutOrder = userDao.selectById(2L);
+        User userWithOrder = userDao.selectById(1);
+        User userWithOutOrder = userDao.selectById(2);
 
         Order order = new Order();
         order.setUser(userWithOrder);
         order.setActualOrder(true);
         order.setDateOrder(Timestamp.valueOf(LocalDateTime.now()));
         Map<Product, Integer> orderMap = new HashMap<>();
-        Product testProduct = productDao.selectById(1L);
+        Product testProduct = productDao.selectById(1);
         orderMap.put(testProduct, 1111);
-        orderMap.put(productDao.selectById(2L), 5555);
-        orderMap.put(productDao.selectById(3L), 9999);
+        orderMap.put(productDao.selectById(2), 5555);
+        orderMap.put(productDao.selectById(3), 9999);
         order.setOrderMap(orderMap);
 
         //when

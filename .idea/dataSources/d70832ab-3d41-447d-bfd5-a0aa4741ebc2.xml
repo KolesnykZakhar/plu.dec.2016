@@ -88,7 +88,7 @@ idProduct</columns>
     </column>
     <column id="34" parent="11" name="amount">
       <mandatory>1</mandatory>
-      <data-type>int(9)|0</data-type>
+      <data-type>int(11)|0</data-type>
     </column>
     <index id="35" parent="11" name="FK_kqix2x2skgxjhw6nbjx7ugyhy">
       <columns>idProduct</columns>

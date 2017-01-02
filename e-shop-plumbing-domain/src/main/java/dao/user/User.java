@@ -17,7 +17,7 @@ public class User implements Serializable {
     @Id
     @GeneratedValue
     @Column(name = "idUser")
-    private Long idUser;
+    private Integer idUser;
 
     @ElementCollection(fetch = FetchType.EAGER)
     @CollectionTable(name = "shopping_basket",
@@ -59,6 +59,28 @@ public class User implements Serializable {
     @Column(name = "passwordUser")
     private String passwordUser;
 
+    @Override
+    public int hashCode() {
+        return idUser;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == this) {
+            return true;
+        }
+        if (!(obj instanceof User)) {
+            return false;
+        }
+        User order = (User) obj;
+        return order.idUser.equals(idUser);
+    }
+
+    @Override
+    public String toString() {
+        return firstName + " " + lastName + ", ID: " + idUser;
+    }
+
     public User() {
     }
 
@@ -78,11 +100,11 @@ public class User implements Serializable {
         this.wishList = wishList;
     }
 
-    public Long getIdUser() {
+    public Integer getIdUser() {
         return idUser;
     }
 
-    public void setIdUser(Long id) {
+    public void setIdUser(Integer id) {
         this.idUser = id;
     }
 

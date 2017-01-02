@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 
 public class CategoryDaoImpl implements CategoryDao {
     @Override
-    public Category selectById(Long id) {
+    public Category selectById(Integer id) {
         Session session = HibernateUtil.getSessionFactory().openSession();
         Category category = (Category) session.createCriteria(Category.class)
                 .add(Restrictions.eq("idCategory", id)).uniqueResult();

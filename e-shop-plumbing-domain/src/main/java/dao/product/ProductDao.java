@@ -4,7 +4,7 @@ import java.util.List;
 
 public interface ProductDao {
 
-    Product selectById(Long id);
+    Product selectById(Integer id);
 
     void insert(Product product);
 

@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 
 public class ProductDaoImpl implements ProductDao {
     @Override
-    public Product selectById(Long id) {
+    public Product selectById(Integer id) {
         Session session = HibernateUtil.getSessionFactory().openSession();
         Product product = (Product) session.createCriteria(Product.class)
                 .add(Restrictions.eq("idProduct", id)).uniqueResult();

@@ -3,7 +3,7 @@ package dao.product.category;
 import java.util.List;
 
 public interface CategoryDao {
-    Category selectById(Long id);
+    Category selectById(Integer id);
 
     void insert(Category category);
 

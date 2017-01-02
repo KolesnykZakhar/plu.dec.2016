@@ -1,11 +1,21 @@
 import dao.order.OrderDaoImpl;
 import dao.product.ProductDaoImpl;
+import dao.product.category.Category;
 import dao.product.category.CategoryDaoImpl;
 import dao.user.UserDaoImpl;
 
 
 public class Main {
     public static void main(String[] args) {
+//        Category category = new Category();
+//        System.out.println(category.getIdCategory());
+//        category.setNameCategory("Паяльники");
+//        System.out.println(category.getIdCategory());
+//        new CategoryDaoImpl().insert(category);
+//        System.out.println(category.getIdCategory());
+
+        System.out.println(Integer.MAX_VALUE);
+
 //        new UserDaoImpl().list().stream()
 //                .forEach(o-> System.out.println(o.getIdUser()+":::"+o.getFirstName()));
 //        new UserDaoImpl().list().forEach(a-> System.out.println(a.getIdUser()));

@@ -9,12 +9,12 @@ import java.util.Map;
 
 @Entity
 @Table(name = "product")
-public class Product implements Serializable{
+public class Product implements Serializable {
 
     @Id
     @GeneratedValue
     @Column(name = "idProduct")
-    private Long idProduct;
+    private Integer idProduct;
 
     @Column(name = "price")
     private double price;
@@ -32,17 +32,39 @@ public class Product implements Serializable{
             inverseJoinColumns = {@JoinColumn(name = "idCategory")})
     private Category category;
 
-    @ElementCollection(fetch=FetchType.EAGER)
+    @ElementCollection(fetch = FetchType.EAGER)
     @JoinTable(name = "description_product",
             joinColumns = @JoinColumn(name = "idProduct"))
     @MapKeyColumn(name = "type_characteristic")
     private Map<String, String> description;
 
-    @ElementCollection(fetch=FetchType.EAGER)
+    @ElementCollection(fetch = FetchType.EAGER)
     @JoinTable(name = "pictures_product",
             joinColumns = @JoinColumn(name = "idProduct"))
     @MapKeyColumn(name = "picture_number")
     private Map<Integer, byte[]> pictures;
+
+    @Override
+    public int hashCode() {
+        return idProduct;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == this) {
+            return true;
+        }
+        if (!(obj instanceof Product)) {
+            return false;
+        }
+        Product order = (Product) obj;
+        return order.idProduct.equals(idProduct);
+    }
+
+    @Override
+    public String toString() {
+        return nameProduct + ", №: " + idProduct;
+    }
 
     public Category getCategory() {
         return category;
@@ -68,11 +90,11 @@ public class Product implements Serializable{
         this.description = description;
     }
 
-    public Long getIdProduct() {
+    public Integer getIdProduct() {
         return idProduct;
     }
 
-    public void setIdProduct(Long id) {
+    public void setIdProduct(Integer id) {
         this.idProduct = id;
     }
 

@@ -16,7 +16,7 @@ public class Order implements Serializable {
     @GeneratedValue
     @Column(name = "idOrder")
     private
-    Long idOrder;
+    Integer idOrder;
 
     @Column(name = "actualOrder")
     private
@@ -37,6 +37,28 @@ public class Order implements Serializable {
     @Column(name = "amount")
     private Map<Product, Integer> orderMap;
 
+    @Override
+    public int hashCode() {
+        return idOrder;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == this) {
+            return true;
+        }
+        if (!(obj instanceof Order)) {
+            return false;
+        }
+        Order order = (Order) obj;
+        return order.idOrder.equals(idOrder);
+    }
+
+    @Override
+    public String toString() {
+        return "Заказ №: " + idOrder + ", ID заказчика: " + user.getIdUser();
+    }
+
     public Order() {
     }
 
@@ -48,11 +70,11 @@ public class Order implements Serializable {
         this.dateOrder = dateIrder;
     }
 
-    public Long getIdOrder() {
+    public Integer getIdOrder() {
         return idOrder;
     }
 
-    public void setIdOrder(Long idOrder) {
+    public void setIdOrder(Integer idOrder) {
         this.idOrder = idOrder;
     }
 
