@@ -58,7 +58,7 @@ public class Product implements Serializable {
             return false;
         }
         Product order = (Product) obj;
-        return order.idProduct.equals(idProduct);
+        return order.idProduct != null && order.idProduct.equals(idProduct);
     }
 
     @Override

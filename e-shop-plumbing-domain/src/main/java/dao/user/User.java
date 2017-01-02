@@ -73,7 +73,7 @@ public class User implements Serializable {
             return false;
         }
         User order = (User) obj;
-        return order.idUser.equals(idUser);
+        return order.idUser != null && order.idUser.equals(idUser);
     }
 
     @Override

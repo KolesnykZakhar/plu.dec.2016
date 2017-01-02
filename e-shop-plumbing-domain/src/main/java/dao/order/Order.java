@@ -51,7 +51,7 @@ public class Order implements Serializable {
             return false;
         }
         Order order = (Order) obj;
-        return order.idOrder.equals(idOrder);
+        return order.idOrder != null && order.idOrder.equals(idOrder);
     }
 
     @Override

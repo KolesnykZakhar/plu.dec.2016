@@ -30,7 +30,7 @@ public class Category implements Serializable {
             return false;
         }
         Category order = (Category) obj;
-        return order.idCategory.equals(idCategory);
+        return order.idCategory != null && order.idCategory.equals(idCategory);
     }
 
     @Override
