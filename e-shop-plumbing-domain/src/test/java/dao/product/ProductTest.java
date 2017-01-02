@@ -56,7 +56,7 @@ public class ProductTest {
         Product productFirst = new Product();
         Object productSecond = new Object();
 
-        //then
+        //when, then
         assertFalse(productFirst.equals(productSecond));
         assertFalse(productSecond.equals(productFirst));
     }
@@ -66,7 +66,7 @@ public class ProductTest {
         //given
         Product productFirst = new Product();
 
-        //then
+        //when, then
         assertTrue(productFirst.equals(productFirst));
     }
 
@@ -75,7 +75,7 @@ public class ProductTest {
         //given
         Product productFirst = new Product();
 
-        //then
+        //when, then
         assertFalse(productFirst.equals(null));
     }
 

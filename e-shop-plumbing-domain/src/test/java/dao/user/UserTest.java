@@ -56,7 +56,7 @@ public class UserTest {
         User userFirst = new User();
         Object userSecond = new Object();
 
-        //then
+        //when, then
         assertFalse(userFirst.equals(userSecond));
         assertFalse(userSecond.equals(userFirst));
     }
@@ -66,7 +66,7 @@ public class UserTest {
         //given
         User userFirst = new User();
 
-        //then
+        //when, then
         assertTrue(userFirst.equals(userFirst));
     }
 
@@ -75,7 +75,7 @@ public class UserTest {
         //given
         User userFirst = new User();
 
-        //then
+        //when, then
         assertFalse(userFirst.equals(null));
     }
 

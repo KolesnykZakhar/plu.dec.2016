@@ -1,5 +1,7 @@
 package dao.product;
 
+import dao.product.category.Category;
+
 import java.util.List;
 
 public interface ProductDao {
@@ -13,4 +15,6 @@ public interface ProductDao {
     void remove(Product product);
 
     List<Product> list();
+
+    List<Product> listByCategory(Category category);
 }

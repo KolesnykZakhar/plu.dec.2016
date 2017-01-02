@@ -7,6 +7,8 @@ import dao.user.UserDaoImpl;
 
 public class Main {
     public static void main(String[] args) {
+//        new ProductDaoImpl().listByCategory(new CategoryDaoImpl().selectById(1)).forEach(System.out::println);
+
 //        Category category = new Category();
 //        System.out.println(category.getIdCategory());
 //        category.setNameCategory("Паяльники");
@@ -14,7 +16,7 @@ public class Main {
 //        new CategoryDaoImpl().insert(category);
 //        System.out.println(category.getIdCategory());
 
-        System.out.println(Integer.MAX_VALUE);
+//        System.out.println(Integer.MAX_VALUE);
 
 //        new UserDaoImpl().list().stream()
 //                .forEach(o-> System.out.println(o.getIdUser()+":::"+o.getFirstName()));

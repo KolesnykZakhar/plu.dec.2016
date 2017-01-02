@@ -57,7 +57,7 @@ public class OrderTest {
         Order orderFirst = new Order();
         Object orderSecond = new Object();
 
-        //then
+        //when, then
         assertFalse(orderFirst.equals(orderSecond));
         assertFalse(orderSecond.equals(orderFirst));
     }
@@ -67,7 +67,7 @@ public class OrderTest {
         //given
         Order orderFirst = new Order();
 
-        //then
+        //when, then
         assertTrue(orderFirst.equals(orderFirst));
     }
 
@@ -76,7 +76,7 @@ public class OrderTest {
         //given
         Order orderFirst = new Order();
 
-        //then
+        //when, then
         assertFalse(orderFirst.equals(null));
     }
 

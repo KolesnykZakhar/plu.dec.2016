@@ -63,7 +63,7 @@ public class Product implements Serializable {
 
     @Override
     public String toString() {
-        return nameProduct + ", №: " + idProduct;
+        return nameProduct + ", ID продукта: " + idProduct + ", ID категории: " + getCategory().getIdCategory();
     }
 
     public Category getCategory() {

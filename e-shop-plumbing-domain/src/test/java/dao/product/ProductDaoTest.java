@@ -1,8 +1,6 @@
 package dao.product;
 
-import dao.product.Product;
-import dao.product.ProductDao;
-import dao.product.ProductDaoImpl;
+import dao.product.category.Category;
 import dao.product.category.CategoryDaoImpl;
 import org.junit.Test;
 
@@ -47,5 +45,16 @@ public class ProductDaoTest {
             fail();
         } catch (NullPointerException ignore) {
         }
+    }
+
+    @Test
+    public void listByCategoryTest() {
+        //given
+        Category category = new CategoryDaoImpl().selectById(1);
+        ProductDao productDao = new ProductDaoImpl();
+
+        //when, then
+        assertTrue(productDao.listByCategory(category).stream().anyMatch(
+                products -> products.getCategory().equals(category)));
     }
 }

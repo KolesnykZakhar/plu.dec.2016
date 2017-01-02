@@ -56,7 +56,7 @@ public class CategoryTest {
         Category categoryFirst = new Category();
         Object categorySecond = new Object();
 
-        //then
+        //when, then
         assertFalse(categoryFirst.equals(categorySecond));
         assertFalse(categorySecond.equals(categoryFirst));
     }
@@ -66,7 +66,7 @@ public class CategoryTest {
         //given
         Category categoryFirst = new Category();
 
-        //then
+        //when, then
         assertTrue(categoryFirst.equals(categoryFirst));
     }
 
@@ -75,7 +75,7 @@ public class CategoryTest {
         //given
         Category categoryFirst = new Category();
 
-        //then
+        //when, then
         assertFalse(categoryFirst.equals(null));
     }
 
