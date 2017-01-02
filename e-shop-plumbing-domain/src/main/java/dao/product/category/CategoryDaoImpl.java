@@ -2,11 +2,11 @@ package dao.product.category;
 
 
 import dao.HibernateUtil;
+import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.criterion.Restrictions;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class CategoryDaoImpl implements CategoryDao {
     @Override
@@ -65,7 +65,7 @@ public class CategoryDaoImpl implements CategoryDao {
 
     @Override
     public List<Category> list() {
-        return (List<Category>) HibernateUtil.getSessionFactory().openSession().
-                createCriteria(Category.class).list().stream().distinct().collect(Collectors.toList());
+        return HibernateUtil.getSessionFactory().openSession().
+                createCriteria(Category.class).setResultTransformer(Criteria.DISTINCT_ROOT_ENTITY).list();
     }
 }

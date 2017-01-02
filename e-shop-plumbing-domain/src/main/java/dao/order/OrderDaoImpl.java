@@ -2,13 +2,12 @@ package dao.order;
 
 import dao.HibernateUtil;
 import dao.user.User;
+import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.criterion.Restrictions;
 
 import java.util.List;
-import java.util.function.Predicate;
-import java.util.stream.Collectors;
 
 public class OrderDaoImpl implements OrderDao {
 
@@ -23,47 +22,29 @@ public class OrderDaoImpl implements OrderDao {
 
     @Override
     public List<Order> listOrders() {
-        // TODO: 30.12.2016 implement by sql request
-        return (List<Order>) HibernateUtil.getSessionFactory().openSession().
-                createCriteria(Order.class).list().stream().distinct().collect(Collectors.toList());
+        return HibernateUtil.getSessionFactory().openSession().
+                createCriteria(Order.class).setResultTransformer(Criteria.DISTINCT_ROOT_ENTITY).list();
     }
 
     @Override
     public List<Order> listActualOrders() {
-        // TODO: 30.12.2016 implement by sql request
-        return (List<Order>) HibernateUtil.getSessionFactory().openSession().
-                createCriteria(Order.class).list().stream().filter(order -> ((Order) order).getActualOrder().equals(Boolean.TRUE))
-                .distinct().collect(Collectors.toList());
+        return HibernateUtil.getSessionFactory().openSession().
+                createCriteria(Order.class).add(Restrictions.eq("actualOrder", true))
+                .setResultTransformer(Criteria.DISTINCT_ROOT_ENTITY).list();
     }
 
     @Override
     public List<Order> listOrdersByUser(User user) {
-        //        return (List<Order>) HibernateUtil.getSessionFactory().openSession().
-//                createCriteria(Order.class).add(Restrictions.eq("idUser", user.getIdUser()))
-//                .list().stream().distinct().collect(Collectors.toList());
-        // TODO: 30.12.2016 implement by sql request
-        return (List<Order>) HibernateUtil.getSessionFactory().openSession().
-                createCriteria(Order.class).list().stream().distinct()
-                .filter(new Predicate() {
-                    @Override
-                    public boolean test(Object o) {
-                        return ((Order) o).getUser().getIdUser().equals(user);
-                    }
-                }).collect(Collectors.toList());
+        return HibernateUtil.getSessionFactory().openSession().
+                createCriteria(Order.class).add(Restrictions.eq("user", user))
+                .setResultTransformer(Criteria.DISTINCT_ROOT_ENTITY).list();
     }
 
     @Override
     public List<Order> listActualOrdersByUser(User user) {
-        return (List<Order>) HibernateUtil.getSessionFactory().openSession().
-                createCriteria(Order.class)
-                .list().stream().filter(order -> ((Order) order).getActualOrder().equals(Boolean.TRUE)
-                        && ((Order) order).getUser().getIdUser().equals(user))
-                .distinct().collect(Collectors.toList());
-        // TODO: 30.12.2016 implement by sql request
-//        return (List<Order>) HibernateUtil.getSessionFactory().openSession().
-//                createCriteria(Order.class).add(Restrictions.eq("idUser", user.getIdUser()))
-//                .list().stream().filter(order -> ((Order) order).getActualOrder().equals(Boolean.TRUE))
-//                .distinct().collect(Collectors.toList());
+        return HibernateUtil.getSessionFactory().openSession().
+                createCriteria(Order.class).add(Restrictions.eq("user", user)).add(Restrictions.eq("actualOrder", true))
+                .setResultTransformer(Criteria.DISTINCT_ROOT_ENTITY).list();
     }
 
     @Override

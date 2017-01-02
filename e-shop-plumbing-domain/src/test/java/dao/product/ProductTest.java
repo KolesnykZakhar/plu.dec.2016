@@ -9,18 +9,6 @@ public class ProductTest {
     private final static int TEST_VALUE_ID_FOR_SECOND_PRODUCT = 2;
 
     @Test
-    public void hashCodeTest() throws Exception {
-        //given
-        Product productFirst = new Product();
-
-        //when
-        productFirst.setIdProduct(TEST_VALUE_ID_FOR_FIRST_PRODUCT);
-
-        //then
-        assertEquals(productFirst.hashCode(), TEST_VALUE_ID_FOR_FIRST_PRODUCT);
-    }
-
-    @Test
     public void equalsTest_differentIdNotEquals() throws Exception {
         //given
         Product productFirst = new Product();

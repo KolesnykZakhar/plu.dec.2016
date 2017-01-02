@@ -9,18 +9,6 @@ public class CategoryTest {
     private final static int TEST_VALUE_ID_FOR_SECOND_CATEGORY = 2;
 
     @Test
-    public void hashCodeTest() throws Exception {
-        //given
-        Category categoryFirst = new Category();
-
-        //when
-        categoryFirst.setIdCategory(TEST_VALUE_ID_FOR_FIRST_CATEGORY);
-
-        //then
-        assertEquals(categoryFirst.hashCode(), TEST_VALUE_ID_FOR_FIRST_CATEGORY);
-    }
-
-    @Test
     public void equalsTest_differentIdNotEquals() throws Exception {
         //given
         Category categoryFirst = new Category();

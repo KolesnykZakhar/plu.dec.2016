@@ -60,11 +60,6 @@ public class User implements Serializable {
     private String passwordUser;
 
     @Override
-    public int hashCode() {
-        return idUser;
-    }
-
-    @Override
     public boolean equals(Object obj) {
         if (obj == this) {
             return true;

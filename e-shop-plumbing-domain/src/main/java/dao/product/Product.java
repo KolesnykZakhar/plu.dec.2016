@@ -45,11 +45,6 @@ public class Product implements Serializable {
     private Map<Integer, byte[]> pictures;
 
     @Override
-    public int hashCode() {
-        return idProduct;
-    }
-
-    @Override
     public boolean equals(Object obj) {
         if (obj == this) {
             return true;

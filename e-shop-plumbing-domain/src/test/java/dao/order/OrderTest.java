@@ -10,18 +10,6 @@ public class OrderTest {
     private final static int TEST_VALUE_ID_FOR_SECOND_ORDER = 2;
 
     @Test
-    public void hashCodeTest() throws Exception {
-        //given
-        Order orderFirst = new Order();
-
-        //when
-        orderFirst.setIdOrder(TEST_VALUE_ID_FOR_FIRST_ORDER);
-
-        //then
-        assertEquals(orderFirst.hashCode(), TEST_VALUE_ID_FOR_FIRST_ORDER);
-    }
-
-    @Test
     public void equalsTest_differentIdNotEquals() throws Exception {
         //given
         Order orderFirst = new Order();

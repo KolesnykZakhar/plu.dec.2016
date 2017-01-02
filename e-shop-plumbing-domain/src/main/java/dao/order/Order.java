@@ -38,11 +38,6 @@ public class Order implements Serializable {
     private Map<Product, Integer> orderMap;
 
     @Override
-    public int hashCode() {
-        return idOrder;
-    }
-
-    @Override
     public boolean equals(Object obj) {
         if (obj == this) {
             return true;

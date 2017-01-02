@@ -2,11 +2,11 @@ package dao.product;
 
 import dao.HibernateUtil;
 import dao.product.category.Category;
+import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.criterion.Restrictions;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class ProductDaoImpl implements ProductDao {
     @Override
@@ -65,16 +65,14 @@ public class ProductDaoImpl implements ProductDao {
 
     @Override
     public List<Product> list() {
-        return (List<Product>) HibernateUtil.getSessionFactory().openSession().
-                createCriteria(Product.class).list().stream().distinct().collect(Collectors.toList());
+        return HibernateUtil.getSessionFactory().openSession().
+                createCriteria(Product.class).setResultTransformer(Criteria.DISTINCT_ROOT_ENTITY).list();
     }
 
     @Override
     public List<Product> listByCategory(Category category) {
-        return (List<Product>) HibernateUtil.getSessionFactory().openSession().
-                createCriteria(Product.class)
-                .list().stream().filter(product -> ((Product) product).getCategory().equals(category))
-                .distinct().collect(Collectors.toList());
-        // TODO: 02.01.2017 implement by sql request
+        return HibernateUtil.getSessionFactory().openSession().
+                createCriteria(Product.class).add(Restrictions.eq("category", category))
+                .setResultTransformer(Criteria.DISTINCT_ROOT_ENTITY).list();
     }
 }

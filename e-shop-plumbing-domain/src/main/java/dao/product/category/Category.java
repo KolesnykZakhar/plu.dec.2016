@@ -15,12 +15,6 @@ public class Category implements Serializable {
     @Column(name = "nameCategory", unique = true, nullable = false)
     private String nameCategory;
 
-
-    @Override
-    public int hashCode() {
-        return idCategory;
-    }
-
     @Override
     public boolean equals(Object obj) {
         if (obj == this) {

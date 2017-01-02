@@ -9,18 +9,6 @@ public class UserTest {
     private final static int TEST_VALUE_ID_FOR_SECOND_USER = 2;
 
     @Test
-    public void hashCodeTest() throws Exception {
-        //given
-        User userFirst = new User();
-
-        //when
-        userFirst.setIdUser(TEST_VALUE_ID_FOR_FIRST_USER);
-
-        //then
-        assertEquals(userFirst.hashCode(), TEST_VALUE_ID_FOR_FIRST_USER);
-    }
-
-    @Test
     public void equalsTest_differentIdNotEquals() throws Exception {
         //given
         User userFirst = new User();

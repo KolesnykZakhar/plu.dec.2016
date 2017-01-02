@@ -1,12 +1,11 @@
 package dao.user;
 
 import dao.HibernateUtil;
+import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.criterion.Restrictions;
 
 import java.util.List;
-import java.util.function.Predicate;
-import java.util.stream.Collectors;
 
 public class UserDaoImpl implements UserDao {
     @Override
@@ -47,20 +46,16 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public List<User> listOfRegisteredUsers() {
-        // TODO: 02.01.2017 implement by sql request
-        return (List<User>) HibernateUtil.getSessionFactory().openSession().
-                createCriteria(User.class).list().stream().distinct().filter(new Predicate() {
-            @Override
-            public boolean test(Object o) {
-                return ((User) o).getLoginUser() != null;
-            }
-        }).collect(Collectors.toList());
+        // TODO: 02.01.2017 maybe in future to be needing to divide the table
+        return HibernateUtil.getSessionFactory().openSession().
+                createCriteria(User.class).add(Restrictions.isNotNull("loginUser"))
+                .setResultTransformer(Criteria.DISTINCT_ROOT_ENTITY).list();
     }
 
     @Override
     public List<User> list() {
-        return (List<User>) HibernateUtil.getSessionFactory().openSession().
-                createCriteria(User.class).list().stream().distinct().collect(Collectors.toList());
+        return HibernateUtil.getSessionFactory().openSession().
+                createCriteria(User.class).setResultTransformer(Criteria.DISTINCT_ROOT_ENTITY).list();
     }
 
 
