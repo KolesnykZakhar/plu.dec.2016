@@ -5,18 +5,60 @@ import dao.product.category.CategoryDaoImpl;
 import dao.product.Product;
 import dao.product.ProductDao;
 import dao.product.ProductDaoImpl;
-import dao.user.User;
-import dao.user.UserDao;
-import dao.user.UserDaoImpl;
 import org.junit.Test;
 
 import static dao.DatabaseTools.initializeUser;
 import static dao.DatabaseTools.updateFieldsOfUser;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
+import static org.junit.Assert.*;
 
 public class UserDaoTest {
+    @Test
+    public void selectByLoginUser() throws Exception {
+        //given
+        User userExpected = new UserDaoImpl().selectById(1);
+
+        //when
+        User userActual = new UserDaoImpl().selectByLogin(userExpected.getLoginUser());
+
+        //then
+        assertEquals(userExpected, userActual);
+    }
+
+    @Test
+    public void selectByEmailUser() throws Exception {
+        //given
+        User userExpected = new UserDaoImpl().selectById(1);
+
+        //when
+        User userActual = new UserDaoImpl().selectByEmail(userExpected.getEmail());
+
+        //then
+        assertEquals(userExpected, userActual);
+    }
+
+    @Test
+    public void selectByPhoneUser() throws Exception {
+
+        //given
+        User userExpected = new UserDaoImpl().selectById(1);
+
+        //when
+        User userActual = new UserDaoImpl().selectByPhone(userExpected.getPhone());
+
+        //then
+        assertEquals(userExpected, userActual);
+    }
+
+    @Test
+    public void listOfRegisteredUsers() throws Exception {
+        //given
+        UserDao userDao = new UserDaoImpl();
+
+        //when, then
+        assertFalse(userDao.listOfRegisteredUsers().stream().anyMatch(
+                users -> users.getLoginUser() == null));
+    }
+
     @Test
     public void selectById_insert_remove_with_database_category_product_user() throws Exception {
 

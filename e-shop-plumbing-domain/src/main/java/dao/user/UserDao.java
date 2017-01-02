@@ -6,7 +6,15 @@ import java.util.List;
 public interface UserDao {
     User selectById(Integer id);
 
+    User selectByPhone(String phone);
+
+    User selectByEmail(String email);
+
+    User selectByLogin(String login);
+
     List<User> list();
+
+    List<User> listOfRegisteredUsers();
 
     void update(User user);
 
