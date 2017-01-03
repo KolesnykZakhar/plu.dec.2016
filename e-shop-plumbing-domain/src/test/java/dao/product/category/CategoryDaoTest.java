@@ -1,12 +1,9 @@
 package dao.product.category;
 
-import dao.product.category.Category;
-import dao.product.category.CategoryDao;
-import dao.product.category.CategoryDaoImpl;
 import org.junit.Test;
 
-import static dao.DatabaseTools.initializeCategory;
-import static dao.DatabaseTools.updateFieldOfCategory;
+import static dao.DatabaseToolsForTesting.initializeCategory;
+import static dao.DatabaseToolsForTesting.updateFieldOfCategory;
 import static org.junit.Assert.*;
 
 public class CategoryDaoTest {

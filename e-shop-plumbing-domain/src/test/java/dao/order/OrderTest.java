@@ -2,7 +2,8 @@ package dao.order;
 
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 
 public class OrderTest {
@@ -85,7 +86,5 @@ public class OrderTest {
 
         //then
         assertTrue(fst & snd & thd);
-
     }
-
 }

@@ -1,15 +1,13 @@
 package dao.user;
 
-import dao.product.category.CategoryDao;
-import dao.product.category.CategoryDaoImpl;
 import dao.product.Product;
 import dao.product.ProductDao;
 import dao.product.ProductDaoImpl;
+import dao.product.category.CategoryDao;
+import dao.product.category.CategoryDaoImpl;
 import org.junit.Test;
 
-import static dao.DatabaseTools.clearDatabaseFromTestingRows;
-import static dao.DatabaseTools.initializeUser;
-import static dao.DatabaseTools.updateFieldsOfUser;
+import static dao.DatabaseToolsForTesting.*;
 import static org.junit.Assert.*;
 
 public class UserDaoTest {
@@ -128,7 +126,7 @@ public class UserDaoTest {
             }
         } catch (Exception e) {
             clearDatabaseFromTestingRows();
-            fail("test not ended");
+            fail(MESSAGE_NOT_ENDED_FAIL_TEST);
         }
     }
 }

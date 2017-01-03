@@ -4,12 +4,11 @@ import dao.product.category.Category;
 import dao.product.category.CategoryDaoImpl;
 import org.junit.Test;
 
-import static dao.DatabaseTools.clearDatabaseFromTestingRows;
-import static dao.DatabaseTools.initializeProduct;
-import static dao.DatabaseTools.updateFieldOfProduct;
+import static dao.DatabaseToolsForTesting.*;
 import static org.junit.Assert.*;
 
 public class ProductDaoTest {
+
 
     @Test
     public void insert_selectById_update_list_remove_with_database_product() {
@@ -49,7 +48,7 @@ public class ProductDaoTest {
             }
         } catch (Exception e) {
             clearDatabaseFromTestingRows();
-            fail("test not ended");
+            fail(MESSAGE_NOT_ENDED_FAIL_TEST);
         }
     }
 
