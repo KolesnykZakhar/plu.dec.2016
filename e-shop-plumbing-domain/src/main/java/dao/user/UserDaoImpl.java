@@ -1,6 +1,7 @@
 package dao.user;
 
 import dao.HibernateUtil;
+import dao.TransactionUtil;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.criterion.Restrictions;
@@ -61,46 +62,16 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public void update(User user) {
-        Session session = HibernateUtil.getSessionFactory().openSession();
-        session.getTransaction().begin();
-        try {
-            session.merge(user);
-            session.getTransaction().commit();
-        } catch (Exception e) {
-            session.getTransaction().rollback();
-            throw e;
-        } finally {
-            session.close();
-        }
+        TransactionUtil.doTransaction(() -> TransactionUtil.session.merge(user));
     }
 
     @Override
     public void remove(User user) {
-        Session session = HibernateUtil.getSessionFactory().openSession();
-        session.getTransaction().begin();
-        try {
-            session.delete(user);
-            session.getTransaction().commit();
-        } catch (Exception e) {
-            session.getTransaction().rollback();
-            throw e;
-        } finally {
-            session.close();
-        }
+        TransactionUtil.doTransaction(() -> TransactionUtil.session.delete(user));
     }
 
     @Override
     public void insert(User user) {
-        Session session = HibernateUtil.getSessionFactory().openSession();
-        session.getTransaction().begin();
-        try {
-            session.save(user);
-            session.getTransaction().commit();
-        } catch (Exception e) {
-            session.getTransaction().rollback();
-            throw e;
-        } finally {
-            session.close();
-        }
+        TransactionUtil.doTransaction(() -> TransactionUtil.session.save(user));
     }
 }

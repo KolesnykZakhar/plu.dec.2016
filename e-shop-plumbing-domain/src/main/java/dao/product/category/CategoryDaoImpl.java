@@ -2,6 +2,7 @@ package dao.product.category;
 
 
 import dao.HibernateUtil;
+import dao.TransactionUtil;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.criterion.Restrictions;
@@ -20,47 +21,17 @@ public class CategoryDaoImpl implements CategoryDao {
 
     @Override
     public void insert(Category category) {
-        Session session = HibernateUtil.getSessionFactory().openSession();
-        session.getTransaction().begin();
-        try {
-            session.save(category);
-            session.getTransaction().commit();
-        } catch (Exception e) {
-            session.getTransaction().rollback();
-            throw e;
-        } finally {
-            session.close();
-        }
+        TransactionUtil.doTransaction(() -> TransactionUtil.session.save(category));
     }
 
     @Override
     public void update(Category category) {
-        Session session = HibernateUtil.getSessionFactory().openSession();
-        session.getTransaction().begin();
-        try {
-            session.merge(category);
-            session.getTransaction().commit();
-        } catch (Exception e) {
-            session.getTransaction().rollback();
-            throw e;
-        } finally {
-            session.close();
-        }
+        TransactionUtil.doTransaction(() -> TransactionUtil.session.merge(category));
     }
 
     @Override
     public void remove(Category category) {
-        Session session = HibernateUtil.getSessionFactory().openSession();
-        session.getTransaction().begin();
-        try {
-            session.delete(category);
-            session.getTransaction().commit();
-        } catch (Exception e) {
-            session.getTransaction().rollback();
-            throw e;
-        } finally {
-            session.close();
-        }
+        TransactionUtil.doTransaction(() -> TransactionUtil.session.delete(category));
     }
 
     @Override

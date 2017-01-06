@@ -1,10 +1,10 @@
 package dao.order;
 
 import dao.HibernateUtil;
+import dao.TransactionUtil;
 import dao.user.User;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
-import org.hibernate.Transaction;
 import org.hibernate.criterion.Restrictions;
 
 import java.util.List;
@@ -49,47 +49,16 @@ public class OrderDaoImpl implements OrderDao {
 
     @Override
     public void insert(Order order) {
-        Session session = HibernateUtil.getSessionFactory().openSession();
-        Transaction transaction = session.getTransaction();
-        transaction.begin();
-        try {
-            session.save(order);
-            transaction.commit();
-        } catch (Exception e) {
-            transaction.rollback();
-            throw e;
-        } finally {
-            session.close();
-        }
+        TransactionUtil.doTransaction(() -> TransactionUtil.session.save(order));
     }
 
     @Override
     public void remove(Order order) {
-        Session session = HibernateUtil.getSessionFactory().openSession();
-        session.getTransaction().begin();
-        try {
-            session.delete(order);
-            session.getTransaction().commit();
-        } catch (Exception e) {
-            session.getTransaction().rollback();
-            throw e;
-        } finally {
-            session.close();
-        }
+        TransactionUtil.doTransaction(() -> TransactionUtil.session.delete(order));
     }
 
     @Override
     public void update(Order order) {
-        Session session = HibernateUtil.getSessionFactory().openSession();
-        session.getTransaction().begin();
-        try {
-            session.merge(order);
-            session.getTransaction().commit();
-        } catch (Exception e) {
-            session.getTransaction().rollback();
-            throw e;
-        } finally {
-            session.close();
-        }
+        TransactionUtil.doTransaction(() -> TransactionUtil.session.merge(order));
     }
 }

@@ -1,6 +1,7 @@
 package dao.product;
 
 import dao.HibernateUtil;
+import dao.TransactionUtil;
 import dao.product.category.Category;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
@@ -20,47 +21,17 @@ public class ProductDaoImpl implements ProductDao {
 
     @Override
     public void insert(Product product) {
-        Session session = HibernateUtil.getSessionFactory().openSession();
-        session.getTransaction().begin();
-        try {
-            session.save(product);
-            session.getTransaction().commit();
-        } catch (Exception e) {
-            session.getTransaction().rollback();
-            throw e;
-        } finally {
-            session.close();
-        }
+        TransactionUtil.doTransaction(() -> TransactionUtil.session.save(product));
     }
 
     @Override
     public void update(Product product) {
-        Session session = HibernateUtil.getSessionFactory().openSession();
-        session.getTransaction().begin();
-        try {
-            session.merge(product);
-            session.getTransaction().commit();
-        } catch (Exception e) {
-            session.getTransaction().rollback();
-            throw e;
-        } finally {
-            session.close();
-        }
+        TransactionUtil.doTransaction(() -> TransactionUtil.session.merge(product));
     }
 
     @Override
     public void remove(Product product) {
-        Session session = HibernateUtil.getSessionFactory().openSession();
-        session.getTransaction().begin();
-        try {
-            session.delete(product);
-            session.getTransaction().commit();
-        } catch (Exception e) {
-            session.getTransaction().rollback();
-            throw e;
-        } finally {
-            session.close();
-        }
+        TransactionUtil.doTransaction(() -> TransactionUtil.session.delete(product));
     }
 
     @Override
