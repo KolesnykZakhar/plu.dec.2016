@@ -14,26 +14,26 @@ public class Order implements Serializable {
 
     @Id
     @GeneratedValue
-    @Column(name = "idOrder")
+    @Column(name = "id_order")
     private
     Integer idOrder;
 
-    @Column(name = "actualOrder")
+    @Column(name = "actual_order")
     private
     Boolean actualOrder;
 
-    @Column(name = "dateOrder")
+    @Column(name = "date_order")
     private
     Timestamp dateOrder;
 
     @ManyToOne
-    @JoinColumn(name = "idUser")
+    @JoinColumn(name = "id_user")
     private User user;
 
     @ElementCollection(fetch = FetchType.EAGER)
     @CollectionTable(name = "orders_product",
-            joinColumns = @JoinColumn(name = "idOrder"))
-    @MapKeyJoinColumn(name = "idProduct")
+            joinColumns = @JoinColumn(name = "id_order"))
+    @MapKeyJoinColumn(name = "id_product")
     @Column(name = "amount")
     private Map<Product, Integer> orderMap;
 

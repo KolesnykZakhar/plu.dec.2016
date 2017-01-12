@@ -35,6 +35,7 @@ public class CategoryDaoImpl implements CategoryDao {
     }
 
     @Override
+    @SuppressWarnings("unchecked")
     public List<Category> list() {
         return HibernateUtil.getSessionFactory().openSession().
                 createCriteria(Category.class).setResultTransformer(Criteria.DISTINCT_ROOT_ENTITY).list();

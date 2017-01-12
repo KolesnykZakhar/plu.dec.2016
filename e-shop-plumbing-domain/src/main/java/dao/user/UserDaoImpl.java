@@ -46,6 +46,7 @@ public class UserDaoImpl implements UserDao {
     }
 
     @Override
+    @SuppressWarnings("unchecked")
     public List<User> listOfRegisteredUsers() {
         // TODO: 02.01.2017 maybe in future to be needing to divide the table
         return HibernateUtil.getSessionFactory().openSession().
@@ -54,6 +55,7 @@ public class UserDaoImpl implements UserDao {
     }
 
     @Override
+    @SuppressWarnings("unchecked")
     public List<User> list() {
         return HibernateUtil.getSessionFactory().openSession().
                 createCriteria(User.class).setResultTransformer(Criteria.DISTINCT_ROOT_ENTITY).list();

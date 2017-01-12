@@ -13,7 +13,7 @@ public class Product implements Serializable {
 
     @Id
     @GeneratedValue
-    @Column(name = "idProduct")
+    @Column(name = "id_product")
     private Integer idProduct;
 
     @Column(name = "price")
@@ -23,24 +23,24 @@ public class Product implements Serializable {
     private int amount;
 
     @NotEmpty
-    @Column(name = "nameProduct")
+    @Column(name = "name_product")
     private String nameProduct;
 
     @ManyToOne
     @JoinTable(name = "category_product",
-            joinColumns = {@JoinColumn(name = "idProduct")},
-            inverseJoinColumns = {@JoinColumn(name = "idCategory")})
+            joinColumns = {@JoinColumn(name = "id_product")},
+            inverseJoinColumns = {@JoinColumn(name = "id_category")})
     private Category category;
 
     @ElementCollection(fetch = FetchType.EAGER)
     @JoinTable(name = "description_product",
-            joinColumns = @JoinColumn(name = "idProduct"))
+            joinColumns = @JoinColumn(name = "id_product"))
     @MapKeyColumn(name = "type_characteristic")
     private Map<String, String> description;
 
     @ElementCollection(fetch = FetchType.EAGER)
     @JoinTable(name = "pictures_product",
-            joinColumns = @JoinColumn(name = "idProduct"))
+            joinColumns = @JoinColumn(name = "id_product"))
     @MapKeyColumn(name = "picture_number")
     private Map<Integer, byte[]> pictures;
 

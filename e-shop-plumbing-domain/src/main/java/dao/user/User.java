@@ -16,28 +16,28 @@ public class User implements Serializable {
 
     @Id
     @GeneratedValue
-    @Column(name = "idUser")
+    @Column(name = "id_user")
     private Integer idUser;
 
     @ElementCollection(fetch = FetchType.EAGER)
     @CollectionTable(name = "shopping_basket",
-            joinColumns = @JoinColumn(name = "idUser"))
-    @MapKeyJoinColumn(name = "idProduct")
+            joinColumns = @JoinColumn(name = "id_user"))
+    @MapKeyJoinColumn(name = "id_product")
     @Column(name = "amount")
     private Map<Product, Integer> shoppingBasket;
 
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "wish_list",
-            joinColumns = {@JoinColumn(name = "idUser")},
-            inverseJoinColumns = {@JoinColumn(name = "idProduct")})
+            joinColumns = {@JoinColumn(name = "id_user")},
+            inverseJoinColumns = {@JoinColumn(name = "id_product")})
     private Set<Product> wishList;
 
     @NotEmpty
-    @Column(name = "firstName")
+    @Column(name = "first_name")
     private String firstName;
 
     @NotEmpty
-    @Column(name = "lastName")
+    @Column(name = "last_name")
     private String lastName;
 
     @Email
@@ -53,13 +53,13 @@ public class User implements Serializable {
     @Column(name = "address")
     private String address;
 
-    @Column(name = "loginUser")
+    @Column(name = "login_user")
     private String loginUser;
 
-    @Column(name = "passwordUser")
+    @Column(name = "password_user")
     private String passwordUser;
 
-    @Column(name = "isAdmin")
+    @Column(name = "is_admin")
     private boolean isAdmin;
 
     @Override

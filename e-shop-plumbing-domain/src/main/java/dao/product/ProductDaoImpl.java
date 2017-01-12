@@ -35,12 +35,14 @@ public class ProductDaoImpl implements ProductDao {
     }
 
     @Override
+    @SuppressWarnings("unchecked")
     public List<Product> list() {
         return HibernateUtil.getSessionFactory().openSession().
                 createCriteria(Product.class).setResultTransformer(Criteria.DISTINCT_ROOT_ENTITY).list();
     }
 
     @Override
+    @SuppressWarnings("unchecked")
     public List<Product> listByCategory(Category category) {
         return HibernateUtil.getSessionFactory().openSession().
                 createCriteria(Product.class).add(Restrictions.eq("category", category))

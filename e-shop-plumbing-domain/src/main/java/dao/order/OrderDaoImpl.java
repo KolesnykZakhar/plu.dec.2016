@@ -21,12 +21,14 @@ public class OrderDaoImpl implements OrderDao {
     }
 
     @Override
+    @SuppressWarnings("unchecked")
     public List<Order> listOrders() {
         return HibernateUtil.getSessionFactory().openSession().
                 createCriteria(Order.class).setResultTransformer(Criteria.DISTINCT_ROOT_ENTITY).list();
     }
 
     @Override
+    @SuppressWarnings("unchecked")
     public List<Order> listActualOrders() {
         return HibernateUtil.getSessionFactory().openSession().
                 createCriteria(Order.class).add(Restrictions.eq("actualOrder", true))
@@ -34,6 +36,7 @@ public class OrderDaoImpl implements OrderDao {
     }
 
     @Override
+    @SuppressWarnings("unchecked")
     public List<Order> listOrdersByUser(User user) {
         return HibernateUtil.getSessionFactory().openSession().
                 createCriteria(Order.class).add(Restrictions.eq("user", user))
@@ -41,6 +44,7 @@ public class OrderDaoImpl implements OrderDao {
     }
 
     @Override
+    @SuppressWarnings("unchecked")
     public List<Order> listActualOrdersByUser(User user) {
         return HibernateUtil.getSessionFactory().openSession().
                 createCriteria(Order.class).add(Restrictions.eq("user", user)).add(Restrictions.eq("actualOrder", true))

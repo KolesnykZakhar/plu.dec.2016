@@ -9,10 +9,10 @@ public class Category implements Serializable {
 
     @Id
     @GeneratedValue
-    @Column(name = "idCategory")
+    @Column(name = "id_category")
     private Integer idCategory;
 
-    @Column(name = "nameCategory", unique = true, nullable = false)
+    @Column(name = "name_category", unique = true, nullable = false)
     private String nameCategory;
 
     @Override

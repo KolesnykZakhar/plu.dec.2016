@@ -21,12 +21,12 @@
     <table id="16" parent="1" name="orders"/>
     <table id="17" parent="1" name="orders_product"/>
     <table id="18" parent="1" name="users"/>
-    <column id="19" parent="9" name="idProduct">
+    <column id="19" parent="9" name="id_product">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
       <sequence-identity>1</sequence-identity>
     </column>
-    <column id="20" parent="9" name="nameProduct">
+    <column id="20" parent="9" name="name_product">
       <mandatory>1</mandatory>
       <data-type>varchar(45)|0</data-type>
     </column>
@@ -37,52 +37,52 @@
       <data-type>int(9)|0</data-type>
     </column>
     <index id="23" parent="9" name="product_name_uindex">
-      <columns>nameProduct</columns>
+      <columns>name_product</columns>
       <desc-columns></desc-columns>
       <unique>1</unique>
     </index>
     <key id="24" parent="9" name="PRIMARY">
-      <columns>idProduct</columns>
+      <columns>id_product</columns>
       <primary>1</primary>
     </key>
     <key id="25" parent="9" name="product_name_uindex">
-      <columns>nameProduct</columns>
+      <columns>name_product</columns>
       <underlying-index>product_name_uindex</underlying-index>
     </key>
-    <column id="26" parent="10" name="idUser">
+    <column id="26" parent="10" name="id_user">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
     </column>
-    <column id="27" parent="10" name="idProduct">
+    <column id="27" parent="10" name="id_product">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
     </column>
     <index id="28" parent="10" name="FK_givhfcw58sw17bgnxxv5a62oo">
-      <columns>idProduct</columns>
+      <columns>id_product</columns>
       <desc-columns></desc-columns>
     </index>
     <key id="29" parent="10" name="PRIMARY">
-      <columns>idUser
-idProduct</columns>
+      <columns>id_user
+id_product</columns>
       <primary>1</primary>
     </key>
     <foreign-key id="30" parent="10" name="FK_sr8j89p484gt0burb82r6ys3a">
-      <columns>idUser</columns>
+      <columns>id_user</columns>
       <ref-key>~.users.PRIMARY</ref-key>
       <cascade-update-rule>restrict</cascade-update-rule>
       <cascade-delete-rule>restrict</cascade-delete-rule>
     </foreign-key>
     <foreign-key id="31" parent="10" name="FK_givhfcw58sw17bgnxxv5a62oo">
-      <columns>idProduct</columns>
+      <columns>id_product</columns>
       <ref-key>~.product.PRIMARY</ref-key>
       <cascade-update-rule>restrict</cascade-update-rule>
       <cascade-delete-rule>restrict</cascade-delete-rule>
     </foreign-key>
-    <column id="32" parent="11" name="idUser">
+    <column id="32" parent="11" name="id_user">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
     </column>
-    <column id="33" parent="11" name="idProduct">
+    <column id="33" parent="11" name="id_product">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
     </column>
@@ -91,27 +91,27 @@ idProduct</columns>
       <data-type>int(11)|0</data-type>
     </column>
     <index id="35" parent="11" name="FK_kqix2x2skgxjhw6nbjx7ugyhy">
-      <columns>idProduct</columns>
+      <columns>id_product</columns>
       <desc-columns></desc-columns>
     </index>
     <key id="36" parent="11" name="PRIMARY">
-      <columns>idUser
-idProduct</columns>
+      <columns>id_user
+id_product</columns>
       <primary>1</primary>
     </key>
     <foreign-key id="37" parent="11" name="FK_mndskhq7c0fotc8fo2cv5jn34">
-      <columns>idUser</columns>
+      <columns>id_user</columns>
       <ref-key>~.users.PRIMARY</ref-key>
       <cascade-update-rule>restrict</cascade-update-rule>
       <cascade-delete-rule>restrict</cascade-delete-rule>
     </foreign-key>
     <foreign-key id="38" parent="11" name="FK_kqix2x2skgxjhw6nbjx7ugyhy">
-      <columns>idProduct</columns>
+      <columns>id_product</columns>
       <ref-key>~.product.PRIMARY</ref-key>
       <cascade-update-rule>restrict</cascade-update-rule>
       <cascade-delete-rule>restrict</cascade-delete-rule>
     </foreign-key>
-    <column id="39" parent="12" name="idProduct">
+    <column id="39" parent="12" name="id_product">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
     </column>
@@ -123,17 +123,17 @@ idProduct</columns>
       <data-type>varchar(255)|0</data-type>
     </column>
     <key id="42" parent="12" name="PRIMARY">
-      <columns>idProduct
+      <columns>id_product
 type_characteristic</columns>
       <primary>1</primary>
     </key>
     <foreign-key id="43" parent="12" name="FK_5iidk17kgshrsjbnu5277pd62">
-      <columns>idProduct</columns>
+      <columns>id_product</columns>
       <ref-key>~.product.PRIMARY</ref-key>
       <cascade-update-rule>restrict</cascade-update-rule>
       <cascade-delete-rule>restrict</cascade-delete-rule>
     </foreign-key>
-    <column id="44" parent="13" name="idProduct">
+    <column id="44" parent="13" name="id_product">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
     </column>
@@ -145,103 +145,103 @@ type_characteristic</columns>
       <data-type>mediumblob|0</data-type>
     </column>
     <key id="47" parent="13" name="PRIMARY">
-      <columns>idProduct
+      <columns>id_product
 picture_number</columns>
       <primary>1</primary>
     </key>
     <foreign-key id="48" parent="13" name="FK_n8glqe53qhfikj6nyq6fji8u8">
-      <columns>idProduct</columns>
+      <columns>id_product</columns>
       <ref-key>~.product.PRIMARY</ref-key>
       <cascade-update-rule>restrict</cascade-update-rule>
       <cascade-delete-rule>restrict</cascade-delete-rule>
     </foreign-key>
-    <column id="49" parent="14" name="idCategory">
+    <column id="49" parent="14" name="id_category">
       <data-type>int(11)|0</data-type>
     </column>
-    <column id="50" parent="14" name="idProduct">
+    <column id="50" parent="14" name="id_product">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
     </column>
     <index id="51" parent="14" name="FK_805qsqktpxajuo5bgmvbo5ea4">
-      <columns>idCategory</columns>
+      <columns>id_category</columns>
       <desc-columns></desc-columns>
     </index>
     <key id="52" parent="14" name="PRIMARY">
-      <columns>idProduct</columns>
+      <columns>id_product</columns>
       <primary>1</primary>
     </key>
     <foreign-key id="53" parent="14" name="FK_805qsqktpxajuo5bgmvbo5ea4">
-      <columns>idCategory</columns>
+      <columns>id_category</columns>
       <ref-key>~.categories.PRIMARY</ref-key>
       <cascade-update-rule>restrict</cascade-update-rule>
       <cascade-delete-rule>restrict</cascade-delete-rule>
     </foreign-key>
     <foreign-key id="54" parent="14" name="FK_gtr3o3f0w0nceow9t3g6nrgl8">
-      <columns>idProduct</columns>
+      <columns>id_product</columns>
       <ref-key>~.product.PRIMARY</ref-key>
       <cascade-update-rule>restrict</cascade-update-rule>
       <cascade-delete-rule>restrict</cascade-delete-rule>
     </foreign-key>
-    <column id="55" parent="15" name="idCategory">
+    <column id="55" parent="15" name="id_category">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
       <sequence-identity>1</sequence-identity>
     </column>
-    <column id="56" parent="15" name="nameCategory">
+    <column id="56" parent="15" name="name_category">
       <mandatory>1</mandatory>
       <data-type>varchar(45)|0</data-type>
     </column>
     <index id="57" parent="15" name="UK_lhx0d0h60my9qeb97akqw3y6i">
-      <columns>nameCategory</columns>
+      <columns>name_category</columns>
       <desc-columns></desc-columns>
       <unique>1</unique>
     </index>
     <key id="58" parent="15" name="PRIMARY">
-      <columns>idCategory</columns>
+      <columns>id_category</columns>
       <primary>1</primary>
     </key>
     <key id="59" parent="15" name="UK_lhx0d0h60my9qeb97akqw3y6i">
-      <columns>nameCategory</columns>
+      <columns>name_category</columns>
       <underlying-index>UK_lhx0d0h60my9qeb97akqw3y6i</underlying-index>
     </key>
-    <column id="60" parent="16" name="idOrder">
+    <column id="60" parent="16" name="id_order">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
       <sequence-identity>1</sequence-identity>
     </column>
-    <column id="61" parent="16" name="actualOrder">
+    <column id="61" parent="16" name="actual_order">
       <comment>true</comment>
       <mandatory>1</mandatory>
       <data-type>tinyint(1)|0</data-type>
     </column>
-    <column id="62" parent="16" name="idUser">
+    <column id="62" parent="16" name="id_user">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
     </column>
-    <column id="63" parent="16" name="dateOrder">
+    <column id="63" parent="16" name="date_order">
       <mandatory>1</mandatory>
       <data-type>timestamp|0</data-type>
       <default-expression>CURRENT_TIMESTAMP</default-expression>
     </column>
     <index id="64" parent="16" name="order_user_idUser_fk">
-      <columns>idUser</columns>
+      <columns>id_user</columns>
       <desc-columns></desc-columns>
     </index>
     <key id="65" parent="16" name="PRIMARY">
-      <columns>idOrder</columns>
+      <columns>id_order</columns>
       <primary>1</primary>
     </key>
     <foreign-key id="66" parent="16" name="order_user_idUser_fk">
-      <columns>idUser</columns>
+      <columns>id_user</columns>
       <ref-key>~.users.PRIMARY</ref-key>
       <cascade-update-rule>restrict</cascade-update-rule>
       <cascade-delete-rule>restrict</cascade-delete-rule>
     </foreign-key>
-    <column id="67" parent="17" name="idOrder">
+    <column id="67" parent="17" name="id_order">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
     </column>
-    <column id="68" parent="17" name="idProduct">
+    <column id="68" parent="17" name="id_product">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
     </column>
@@ -250,36 +250,36 @@ picture_number</columns>
       <data-type>int(11)|0</data-type>
     </column>
     <index id="70" parent="17" name="order_product_product_idProduct_fk">
-      <columns>idProduct</columns>
+      <columns>id_product</columns>
       <desc-columns></desc-columns>
     </index>
     <key id="71" parent="17" name="PRIMARY">
-      <columns>idOrder
-idProduct</columns>
+      <columns>id_order
+id_product</columns>
       <primary>1</primary>
     </key>
     <foreign-key id="72" parent="17" name="order_product_order_idOrder_fk">
-      <columns>idOrder</columns>
+      <columns>id_order</columns>
       <ref-key>~.orders.PRIMARY</ref-key>
       <cascade-update-rule>restrict</cascade-update-rule>
       <cascade-delete-rule>restrict</cascade-delete-rule>
     </foreign-key>
     <foreign-key id="73" parent="17" name="order_product_product_idProduct_fk">
-      <columns>idProduct</columns>
+      <columns>id_product</columns>
       <ref-key>~.product.PRIMARY</ref-key>
       <cascade-update-rule>restrict</cascade-update-rule>
       <cascade-delete-rule>restrict</cascade-delete-rule>
     </foreign-key>
-    <column id="74" parent="18" name="idUser">
+    <column id="74" parent="18" name="id_user">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
       <sequence-identity>1</sequence-identity>
     </column>
-    <column id="75" parent="18" name="firstName">
+    <column id="75" parent="18" name="first_name">
       <mandatory>1</mandatory>
       <data-type>varchar(20)|0</data-type>
     </column>
-    <column id="76" parent="18" name="lastName">
+    <column id="76" parent="18" name="last_name">
       <mandatory>1</mandatory>
       <data-type>varchar(20)|0</data-type>
     </column>
@@ -295,13 +295,13 @@ idProduct</columns>
       <mandatory>1</mandatory>
       <data-type>varchar(40)|0</data-type>
     </column>
-    <column id="80" parent="18" name="loginUser">
+    <column id="80" parent="18" name="login_user">
       <data-type>varchar(20)|0</data-type>
     </column>
-    <column id="81" parent="18" name="passwordUser">
+    <column id="81" parent="18" name="password_user">
       <data-type>varchar(20)|0</data-type>
     </column>
-    <column id="82" parent="18" name="isAdmin">
+    <column id="82" parent="18" name="is_admin">
       <mandatory>1</mandatory>
       <data-type>tinyint(1)|0</data-type>
       <default-expression>&apos;0&apos;</default-expression>
@@ -312,7 +312,7 @@ idProduct</columns>
       <unique>1</unique>
     </index>
     <index id="84" parent="18" name="user_login_uindex">
-      <columns>loginUser</columns>
+      <columns>login_user</columns>
       <desc-columns></desc-columns>
       <unique>1</unique>
     </index>
@@ -322,7 +322,7 @@ idProduct</columns>
       <unique>1</unique>
     </index>
     <key id="86" parent="18" name="PRIMARY">
-      <columns>idUser</columns>
+      <columns>id_user</columns>
       <primary>1</primary>
     </key>
     <key id="87" parent="18" name="user_email_uindex">
@@ -334,7 +334,7 @@ idProduct</columns>
       <underlying-index>user_phone_uindex</underlying-index>
     </key>
     <key id="89" parent="18" name="user_login_uindex">
-      <columns>loginUser</columns>
+      <columns>login_user</columns>
       <underlying-index>user_login_uindex</underlying-index>
     </key>
   </database-model>
